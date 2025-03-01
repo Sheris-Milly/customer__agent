@@ -1,0 +1,4 @@
+from langchain.memory import ConversationBufferMemory
+
+# Define memory
+memory = ConversationBufferMemory()
