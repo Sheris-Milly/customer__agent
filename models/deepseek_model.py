@@ -1,63 +1,109 @@
-# models/deepseek_model.py
-from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
-from langchain.llms import HuggingFacePipeline
-import torch
 import logging
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+from typing import List, Dict, Any, Optional, Tuple
+
 from config import MODEL_NAME, MAX_LENGTH, TEMPERATURE
 
+# Configure logging
 logger = logging.getLogger(__name__)
 
 
-def load_deepseek_model(model_name=MODEL_NAME):
+class DeepSeekModel:
     """
-    Load the DeepSeek R1 model and return a LangChain LLM.
+    A wrapper for the DeepSeek model that handles text generation and model loading.
     """
-    try:
-        logger.info(f"Loading model: {model_name}")
 
-        # Set device to CPU if no GPU is available
-        device_map = "auto" if torch.cuda.is_available() else "cpu"
-        dtype = torch.float16 if torch.cuda.is_available() else torch.float32
+    def __init__(self):
+        """Initialize the DeepSeek model."""
+        logger.info(f"Initializing DeepSeek model: {MODEL_NAME}")
 
-        # Load tokenizer and model
-        tokenizer = AutoTokenizer.from_pretrained(model_name)
-        model = AutoModelForCausalLM.from_pretrained(
-            model_name,
-            torch_dtype=dtype,
-            device_map=device_map,
-            low_cpu_mem_usage=True
-        )
+        try:
+            self.tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+            logger.debug("Tokenizer loaded successfully")
 
-        # Create text generation pipeline
-        hf_pipeline = pipeline(
-            "text-generation",
-            model=model,
-            tokenizer=tokenizer,
-            max_length=MAX_LENGTH,
-            temperature=TEMPERATURE
-        )
+            # Check if CUDA is available
+            device = "cuda" if torch.cuda.is_available() else "cpu"
+            logger.debug(f"Using device: {device}")
 
-        # Wrap in LangChain
-        return HuggingFacePipeline(pipeline=hf_pipeline)
+            # Load the model
+            self.model = AutoModelForCausalLM.from_pretrained(
+                MODEL_NAME,
+                torch_dtype=torch.float16 if device == "cuda" else torch.float32,
+                low_cpu_mem_usage=True,
+                device_map=device
+            )
+            logger.info(f"Model loaded successfully on {device}")
 
-    except Exception as e:
-        logger.error(f"Error loading DeepSeek model: {str(e)}")
-        raise
+        except Exception as e:
+            logger.error(f"Error loading DeepSeek model: {str(e)}")
+            raise RuntimeError(f"Failed to load DeepSeek model: {str(e)}")
 
+    def generate_response(
+            self,
+            prompt: str,
+            system_prompt: Optional[str] = None,
+            max_length: int = MAX_LENGTH,
+            temperature: float = TEMPERATURE,
+            context: Optional[List[Dict[str, str]]] = None
+    ) -> str:
+        """
+        Generate a response from the model based on the given prompt.
 
-# Initialize the model
-try:
-    llm = load_deepseek_model()
-    logger.info("DeepSeek model loaded successfully")
-except Exception as e:
-    logger.error(f"Failed to load model: {str(e)}")
-    # Provide a fallback for testing
-    import os
+        Args:
+            prompt: The user's input prompt
+            system_prompt: Optional system prompt to guide the model's behavior
+            max_length: Maximum length of the generated response
+            temperature: Temperature parameter for generation (higher = more creative)
+            context: List of previous conversation messages
 
-    if os.environ.get("TESTING") == "1":
-        from langchain.llms import FakeListLLM
+        Returns:
+            The generated text response
+        """
+        try:
+            logger.debug(f"Generating response for prompt: {prompt[:50]}...")
 
-        llm = FakeListLLM(responses=["This is a test response from the fallback model."])
-        logger.warning("Using fallback test model")
-    else:
-        raise
+            # Prepare the conversation history if provided
+            messages = []
+
+            # Add system prompt if provided
+            if system_prompt:
+                messages.append({"role": "system", "content": system_prompt})
+
+            # Add conversation history if provided
+            if context:
+                messages.extend(context)
+
+            # Add the current user prompt
+            messages.append({"role": "user", "content": prompt})
+
+            # Format the conversation for the model
+            formatted_prompt = self.tokenizer.apply_chat_template(
+                messages,
+                tokenize=False,
+                add_generation_prompt=True
+            )
+
+            # Tokenize the prompt
+            inputs = self.tokenizer(formatted_prompt, return_tensors="pt").to(self.model.device)
+
+            # Generate the response
+            with torch.no_grad():
+                output = self.model.generate(
+                    inputs.input_ids,
+                    max_length=max_length,
+                    temperature=temperature,
+                    do_sample=temperature > 0,
+                    pad_token_id=self.tokenizer.eos_token_id
+                )
+
+            # Decode the response, skipping the input prompt
+            response_ids = output[0][inputs.input_ids.shape[1]:]
+            response = self.tokenizer.decode(response_ids, skip_special_tokens=True)
+
+            logger.debug(f"Generated response: {response[:50]}...")
+            return response.strip()
+
+        except Exception as e:
+            logger.error(f"Error generating response: {str(e)}")
+            return f"I'm having trouble processing your request. Please try again later. (Error: {str(e)})"

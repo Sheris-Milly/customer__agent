@@ -1,5 +1,205 @@
 [
-    {"question": "How do I return an item?", "answer": "You can return items within 30 days for a full refund."},
-    {"question": "Where is my order?", "answer": "If your order is delayed, check the tracking link in your email."},
-    {"question": "Customer service hours?", "answer": "Customer support is available 24/7 via chat and phone."}
+  {
+    "question": "How do I track my order?",
+    "answer": "You can track your order by entering your order ID in the order tracking section on our website or by contacting our customer support."
+  },
+  {
+    "question": "What is your return policy?",
+    "answer": "We accept returns within 30 days of purchase. Items must be in their original condition with tags attached. Please visit our Returns page for more details."
+  },
+  {
+    "question": "How long does shipping take?",
+    "answer": "Standard shipping typically takes 3-5 business days within the continental US. Express shipping options are available for 1-2 day delivery."
+  },
+  {
+    "question": "Do you ship internationally?",
+    "answer": "Yes, we ship to most countries worldwide. International shipping times vary by destination, typically taking 7-14 business days."
+  },
+  {
+    "question": "How can I change or cancel my order?",
+    "answer": "You can change or cancel your order within 1 hour of placing it. Please contact our customer service team immediately with your order number."
+  },
+  {
+    "question": "What payment methods do you accept?",
+    "answer": "We accept Visa, Mastercard, American Express, PayPal, and Apple Pay."
+  },
+  {
+    "question": "Are my payment details secure?",
+    "answer": "Yes, we use industry-standard encryption and security measures to protect your payment information."
+  },
+  {
+    "question": "How do I create an account?",
+    "answer": "You can create an account by clicking on the 'Sign Up' button at the top of our website and following the registration process."
+  },
+  {
+    "question": "I forgot my password. How do I reset it?",
+    "answer": "Click on 'Forgot Password' on the login page, and follow the instructions to reset your password via email."
+  },
+  {
+    "question": "Can I change my shipping address after placing an order?",
+    "answer": "If your order hasn't been shipped yet, please contact our customer service team as soon as possible to update your shipping address."
+  },
+  {
+    "question": "Do you offer gift wrapping?",
+    "answer": "Yes, gift wrapping options are available during checkout. Please select the gift wrapping option if you would like to include it with your order."
+  },
+  {
+    "question": "What should I do if I receive a damaged item?",
+    "answer": "We're sorry for the inconvenience. Please contact our customer support team with your order number and a photo of the damaged item, and we'll help you resolve the issue."
+  },
+  {
+    "question": "How do I contact customer support?",
+    "answer": "You can reach our customer support team via email at support@example.com or by calling our hotline at 1-800-123-4567."
+  },
+  {
+    "question": "What are your business hours?",
+    "answer": "Our customer support is available Monday through Friday, from 9 AM to 5 PM EST."
+  },
+  {
+    "question": "Is my personal information safe?",
+    "answer": "We take your privacy seriously. Your personal information is stored securely and is never shared with third parties without your consent."
+  },
+  {
+    "question": "How can I subscribe to your newsletter?",
+    "answer": "You can subscribe to our newsletter by entering your email address at the bottom of our homepage and clicking 'Subscribe.'"
+  },
+  {
+    "question": "Do you have a mobile app?",
+    "answer": "Yes, our mobile app is available for both iOS and Android. You can download it from the App Store or Google Play."
+  },
+  {
+    "question": "Can I return an online order in-store?",
+    "answer": "Yes, you can return online orders in our physical stores. Please bring your order confirmation and the item in its original packaging."
+  },
+  {
+    "question": "What if I haven't received my order?",
+    "answer": "If you haven't received your order within the estimated delivery time, please contact our customer support team to investigate the issue."
+  },
+  {
+    "question": "Hi, can you help me?",
+    "answer": "Hello! I'm here to help. What can I assist you with today?"
+  },
+  {
+    "question": "Can I change my order after it's been placed?",
+    "answer": "You may request a change to your order within 1 hour of placing it by contacting our customer service team. After that, changes may not be possible."
+  },
+  {
+    "question": "Are there any additional fees for international shipping?",
+    "answer": "International orders may incur additional customs duties or taxes, which are the responsibility of the recipient. Please check with your local customs office for more details."
+  },
+  {
+    "question": "What should I do if I have a question that isn't listed here?",
+    "answer": "If your question isn't listed, please reach out to our customer support team through our website or give us a call. We're always happy to help."
+  },
+
+
+  {
+    "question": "How do I track my order?",
+    "answer": "Track your order in real-time by entering your 8-digit order ID in the 'Order Tracking' portal on our website. You'll receive live carrier updates and an estimated delivery window."
+  },
+  {
+    "question": "What is your return policy?",
+    "answer": "Returns are accepted within 30 days. Items must be unopened/unused with original packaging. Start your return at www.yourcompany.com/returns or visit a physical store for instant credit."
+  },
+
+
+  {
+    "question": "My order is delayed - what should I do?",
+    "answer": "Carriers occasionally experience delays. Check tracking for updates. If delayed >48hrs past estimate, contact us for expedited resolution including refunds for express shipping fees."
+  },
+  {
+    "question": "Can I reroute a package after shipping?",
+    "answer": "We offer package rerouting for $7.99. Contact us with your order number and new address before 10 AM local time of the delivery date."
+  },
+
+
+  {
+    "question": "Why was my card declined?",
+    "answer": "Common reasons: insufficient funds, AVS mismatch, or suspected fraud. We recommend contacting your bank first. You may also try an alternate payment method."
+  },
+  {
+    "question": "Is Apple Pay/Google Pay accepted in stores?",
+    "answer": "Yes! All our physical retail locations support contactless payments including Apple Pay, Google Wallet, and Samsung Pay."
+  },
+
+
+  {
+    "question": "How do I merge multiple accounts?",
+    "answer": "For account consolidation, email support@company.com from your primary account with subject 'Account Merge' and list associated email addresses."
+  },
+  {
+    "question": "Why am I getting password reset emails I didn't request?",
+    "answer": "Immediately enable two-factor authentication. This likely indicates someone is attempting access. Forward suspicious emails to security@company.com for investigation."
+  },
+
+
+  {
+    "question": "How do I check warranty status?",
+    "answer": "Enter your 12-digit serial number at www.yourcompany.com/warranty. Coverage includes manufacturing defects but not accidental damage. Extended plans available."
+  },
+  {
+    "question": "Where can I find assembly instructions?",
+    "answer": "Access digital manuals 24/7 at www.yourcompany.com/manuals. Need help? Video guides are available on our YouTube channel @CompanySupport."
+  },
+
+
+  {
+    "question": "Do you offer gift wrapping?",
+    "answer": "Premium gift wrapping ($4.99) with custom message available during checkout. Select 'This is a gift' and choose from 6 seasonal designs."
+  },
+  {
+    "question": "Can I schedule delivery for a specific date?",
+    "answer": "Yes! During checkout, choose 'Scheduled Delivery' and select your preferred date (minimum 3 business days from order date)."
+  },
+
+
+  {
+    "question": "The website won't accept my address",
+    "answer": "Our system verifies addresses via USPS. If encountering errors: 1) Use USPS format abbreviations 2) Remove special characters 3) Try desktop browser if mobile fails."
+  },
+  {
+    "question": "I didn't receive my order confirmation email",
+    "answer": "Check spam/junk folders. Still missing? Verify payment was processed at www.yourcompany.com/payment-status. If confirmed, contact us with transaction ID."
+  },
+
+
+  {
+    "question": "What's excluded from the return policy?",
+    "answer": "Final sale items (marked during purchase), personalized products, and digital downloads are non-returnable. Hygiene-sealed products must be unopened."
+  },
+  {
+    "question": "Do you price match competitors?",
+    "answer": "We price match authorized retailers within 14 days of purchase. Submit a claim at www.yourcompany.com/price-match with competitor's current listing and receipt."
+  },
+
+
+  {
+    "question": "What languages does your support team speak?",
+    "answer": "Our agents are fluent in English, Spanish, and French. For other languages, we offer real-time translation services during live chat."
+  },
+  {
+    "question": "Why was my international order taxed twice?",
+    "answer": "Some countries charge import duties. These are separate from our checkout taxes. Contact your local customs office for refund processes in your country."
+  },
+
+
+  {
+    "question": "How do loyalty points expire?",
+    "answer": "Points expire 18 months after earning if account becomes inactive (no purchases/redemptions). We send expiration warnings at 60, 30, and 7 days remaining."
+  },
+  {
+    "question": "Can I donate my rewards points?",
+    "answer": "Yes! Convert points to charity donations at 1:1 ratio. Our current partners include Red Cross, WWF, and Feeding America. Visit your rewards dashboard to donate."
+  },
+
+
+  {
+    "question": "I need ADA-compliant support",
+    "answer": "We offer TTY/TDD services at 1-800-555-0199, video relay support, and alt-text email assistance. Specify needs at www.yourcompany.com/accessibility."
+  },
+  {
+    "question": "Are service animals allowed in stores?",
+    "answer": "Yes, ADA-defined service animals are welcome. Emotional support animals require prior manager approval due to health code regulations in some locations."
+  }
 ]
+

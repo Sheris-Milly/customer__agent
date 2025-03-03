@@ -1,112 +1,116 @@
-# app.py
+import logging
+import uvicorn
 from fastapi import FastAPI, HTTPException, Request
-from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-import logging
-import time
-import os
+from typing import Dict, List, Optional
+
+from config import API_HOST, API_PORT
+from chatbot_agents.chatbot_agent import ChatbotAgent
 
 # Configure logging
 logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    level=logging.DEBUG,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("chatbot.log"),
+        logging.StreamHandler()
+    ]
 )
+
 logger = logging.getLogger(__name__)
 
-# Define API settings
-API_HOST = os.environ.get("API_HOST", "0.0.0.0")
-API_PORT = int(os.environ.get("API_PORT", "8000"))
+app = FastAPI(title="Customer Service Chatbot API")
 
-app = FastAPI(title="DeepSeek R1 Customer Service API")
+# Initialize the chatbot agent
+chatbot_agent = ChatbotAgent()
 
-# Add CORS middleware to allow Streamlit to connect
+# Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Adjust in production
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 
-class ChatInput(BaseModel):
+class ChatRequest(BaseModel):
     message: str
-    session_id: str = "default"  # Allow tracking different conversations
+    session_id: str
+    context: Optional[Dict] = None
 
 
-# Import the agent only after defining the app
-# This prevents circular imports and gives time for logging to initialize
-try:
-    # Import agent_executor instead of agent
-    from chatbot_agents.chatbot_agent import agent_executor as agent
-
-    logger.info("Agent imported successfully")
-except Exception as e:
-    logger.error(f"Error importing agent: {str(e)}")
-
-
-    # Define a fallback agent
-    class FallbackAgent:
-        def run(self, input_text):
-            return "I'm sorry, but the service is currently unavailable. Please try again later."
-
-
-    agent = FallbackAgent()
-    logger.warning("Using fallback agent due to import failure")
-
-
-@app.post("/chat")
-async def chat(input_data: ChatInput):
-    try:
-        start_time = time.time()
-        logger.info(f"Received message from session {input_data.session_id}: {input_data.message}")
-
-        # Process the message with the agent using invoke instead of run
-        try:
-            # Try the new invoke method first
-            response = agent.invoke({"input": input_data.message})
-            if isinstance(response, dict) and "output" in response:
-                result = response["output"]
-            else:
-                result = str(response)
-        except AttributeError:
-            # Fall back to run method if invoke isn't available
-            logger.info("Falling back to agent.run method")
-            result = agent.run(input_data.message)
-
-        # Log timing information
-        processing_time = time.time() - start_time
-        logger.info(f"Processed message in {processing_time:.2f} seconds")
-
-        return {"response": result, "session_id": input_data.session_id}
-
-    except Exception as e:
-        logger.error(f"Error processing message: {str(e)}")
-        raise HTTPException(status_code=500, detail=str(e))
-
-
-@app.exception_handler(Exception)
-async def global_exception_handler(request: Request, exc: Exception):
-    logger.error(f"Global exception: {str(exc)}")
-    return JSONResponse(
-        status_code=500,
-        content={"message": "An unexpected error occurred. Please try again later."}
-    )
-
-
-@app.get("/health")
-async def health_check():
-    return {"status": "healthy"}
+class ChatResponse(BaseModel):
+    response: str
+    session_id: str
+    context: Optional[Dict] = None
 
 
 @app.get("/")
 async def root():
-    return {"message": "DeepSeek R1 Customer Service API is running. Use /chat endpoint to interact."}
+    return {"message": "Customer Service Chatbot API is running"}
+
+
+@app.post("/chat", response_model=ChatResponse)
+async def chat(request: ChatRequest):
+    try:
+        logger.debug(f"Received chat request: {request.message} (Session ID: {request.session_id})")
+
+        # Process the chat request using the chatbot agent
+        response, context = chatbot_agent.process_message(
+            request.message,
+            request.session_id,
+            request.context
+        )
+
+        logger.debug(f"Generated response: {response} (Session ID: {request.session_id})")
+
+        return ChatResponse(
+            response=response,
+            session_id=request.session_id,
+            context=context
+        )
+    except Exception as e:
+        logger.error(f"Error processing chat request: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/faq", response_model=List[Dict])
+async def get_faqs():
+    try:
+        faqs = chatbot_agent.get_faqs()
+        return faqs
+    except Exception as e:
+        logger.error(f"Error retrieving FAQs: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/track_order/{order_id}")
+async def track_order(order_id: str):
+    try:
+        logger.debug(f"Tracking order: {order_id}")
+        order_info = chatbot_agent.track_order(order_id)
+        return order_info
+    except Exception as e:
+        logger.error(f"Error tracking order {order_id}: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/reset_chat")
+async def reset_chat(request: Request):
+    data = await request.json()
+    session_id = data.get("session_id")
+
+    try:
+        logger.debug(f"Resetting chat for session: {session_id}")
+        chatbot_agent.reset_conversation(session_id)
+        return {"message": f"Chat session {session_id} has been reset"}
+    except Exception as e:
+        logger.error(f"Error resetting chat session {session_id}: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 if __name__ == "__main__":
-    import uvicorn
-
-    logger.info(f"Starting API server on {API_HOST}:{API_PORT}")
+    logger.info(f"Starting Customer Service Chatbot API on {API_HOST}:{API_PORT}")
     uvicorn.run(app, host=API_HOST, port=API_PORT)
