@@ -1,0 +1,457 @@
+2025-03-03 14:34:55,639 - __main__ - DEBUG - Generated new session ID: dad01280-683b-43a2-86d9-d6d0942b1a01
+2025-03-03 14:34:55,641 - __main__ - DEBUG - Initialized empty messages list
+2025-03-03 14:34:55,641 - __main__ - DEBUG - Initialized empty context dictionary
+2025-03-03 14:34:55,895 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:34:55,901 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:34:59,980 - __main__ - ERROR - Exception retrieving FAQs: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /faq (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000018BEE67BBD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-03 14:35:41,670 - __main__ - DEBUG - Generated new session ID: e2485cd1-1258-47eb-b14b-5fc4d1344d99
+2025-03-03 14:35:41,670 - __main__ - DEBUG - Initialized empty messages list
+2025-03-03 14:35:41,672 - __main__ - DEBUG - Initialized empty context dictionary
+2025-03-03 14:35:41,672 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:35:41,676 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:35:43,725 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:35:43,727 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:35:50,212 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:35:50,217 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:35:52,265 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:35:52,267 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:35:52,282 - __main__ - DEBUG - Sending message to API: hi
+2025-03-03 14:35:52,286 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:36:17,763 - urllib3.connectionpool - DEBUG - http://localhost:8000 "POST /chat HTTP/1.1" 200 2056
+2025-03-03 14:36:17,764 - __main__ - DEBUG - Received response: Okay, so I need to figure out what the user is asking for here. They provided a conversation history where the user just said "hi". It looks like they're greeting me. My role is to respond in a friendly and helpful manner, but I need to make sure I'm accurate and concise.
+
+Hmm, the user didn't ask any specific question, just said "hi". So, I should probably acknowledge their greeting and offer assistance. Maybe I can start with a friendly message and then ask them how I can help. That way, I'm keeping the conversation open and inviting them to provide more details if they have a specific question.
+
+Wait, I should make sure my response isn't too long. The user mentioned "order tracking", "product information", "returns", and other customer service issues. Since they didn't specify, it's safer to ask for more details. But I shouldn't overwhelm them with too many options. Maybe I can list a few common areas where they might need help and ask which one they're interested in.
+
+Alternatively, I could just ask them to share any information they have so I can assist better. But I don't want to assume anything. It's better to be polite and open-ended. So, maybe I can start by thanking them for the greeting, then ask them to elaborate on what they need help with. That way, I can provide targeted assistance without making them feel like they're guessing.
+
+I should also keep the tone friendly and approachable. Maybe something like, "Hi! I'm here to help with any questions you have." That sounds professional and inviting. I don't want to come off as too technical or too casual. It's important to strike a balance between being helpful and maintaining a comfortable interaction.
+
+Wait, let me read the example response they gave. It was "Hi! I'm here to help with any questions you have." That's pretty much what I should do. It's concise, friendly, and clear. It doesn't ask for specific details but invites them to share more information
+2025-03-03 14:36:17,794 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:36:17,797 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:36:19,822 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:36:19,823 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:40:12,383 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:40:12,390 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:40:14,426 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:40:14,428 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:40:14,446 - __main__ - DEBUG - Sending message to API: what s ur bot
+2025-03-03 14:40:14,449 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:40:16,547 - urllib3.connectionpool - DEBUG - http://localhost:8000 "POST /chat HTTP/1.1" 200 346
+2025-03-03 14:40:16,548 - __main__ - DEBUG - Received response: I'm having trouble processing your request. Please try again later. (Error: Input length of input_ids is 522, but `max_length` is set to 512. This can lead to unexpected behavior. You should consider increasing `max_length` or, better yet, setting `max_new_tokens`.)
+2025-03-03 14:40:16,582 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:40:16,584 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:40:18,611 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:40:18,612 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:40:28,011 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:40:28,018 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:40:30,048 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:40:30,049 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:40:30,070 - __main__ - DEBUG - Sending message to API: okey
+2025-03-03 14:40:30,072 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:40:32,140 - urllib3.connectionpool - DEBUG - http://localhost:8000 "POST /chat HTTP/1.1" 200 346
+2025-03-03 14:40:32,140 - __main__ - DEBUG - Received response: I'm having trouble processing your request. Please try again later. (Error: Input length of input_ids is 592, but `max_length` is set to 512. This can lead to unexpected behavior. You should consider increasing `max_length` or, better yet, setting `max_new_tokens`.)
+2025-03-03 14:40:32,171 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:40:32,173 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:40:34,210 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:40:34,211 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:41:08,095 - __main__ - DEBUG - Generated new session ID: a1289093-59cb-4f82-8418-5308b36bbecd
+2025-03-03 14:41:08,095 - __main__ - DEBUG - Initialized empty messages list
+2025-03-03 14:41:08,098 - __main__ - DEBUG - Initialized empty context dictionary
+2025-03-03 14:41:08,100 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:41:08,103 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:41:10,138 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:41:10,138 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:41:14,239 - __main__ - DEBUG - Generated new session ID: c985f74e-2025-41c6-8415-048830aeac6f
+2025-03-03 14:41:14,240 - __main__ - DEBUG - Initialized empty messages list
+2025-03-03 14:41:14,241 - __main__ - DEBUG - Initialized empty context dictionary
+2025-03-03 14:41:14,245 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:41:14,248 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:41:16,291 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:41:16,293 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:43:06,118 - __main__ - DEBUG - Generated new session ID: 74998bb0-3057-41fd-b0c3-d16de2869837
+2025-03-03 14:43:06,118 - __main__ - DEBUG - Initialized empty messages list
+2025-03-03 14:43:06,118 - __main__ - DEBUG - Initialized empty context dictionary
+2025-03-03 14:43:06,126 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:43:06,128 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:43:08,155 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:43:08,155 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:43:20,291 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:43:20,297 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:43:22,326 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:43:22,328 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:43:22,342 - __main__ - DEBUG - Sending message to API: Do you ship internationally?
+2025-03-03 14:43:22,346 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:43:24,472 - urllib3.connectionpool - DEBUG - http://localhost:8000 "POST /chat HTTP/1.1" 200 208
+2025-03-03 14:43:24,473 - __main__ - DEBUG - Received response: Yes, we ship to most countries worldwide. International shipping times vary by destination, typically taking 7-14 business days.
+2025-03-03 14:43:24,503 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:43:24,506 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:43:26,547 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:43:26,549 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:43:35,590 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:43:35,596 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:43:37,639 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:43:37,641 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:43:37,657 - __main__ - DEBUG - Sending message to API: can u help me
+2025-03-03 14:43:37,662 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:43:50,753 - urllib3.connectionpool - DEBUG - http://localhost:8000 "POST /chat HTTP/1.1" 200 1096
+2025-03-03 14:43:50,753 - __main__ - DEBUG - Received response: Okay, so the user initially asked me if we ship internationally. I told them yes and mentioned the shipping times. Now, they've just sent "can u help me." I need to figure out what they're really looking for.
+
+"Can you help me" is a bit vague. It could mean a few things. Maybe they have a specific question or need assistance with something they're doing. But since I don't have their context, I should assume they're seeking help with something related to their business, like ordering, shipping, customer support, etc.
+
+I should respond in a friendly and helpful manner. Maybe ask them to provide more details so I can assist better. Keeping it concise and professional is key here. I don't want to overcomplicate it, but I also need to make sure I cover the most common areas they might need help with.
+
+So, I'll start by thanking them for asking and then ask if they need help with something specific. That way, I can address their needs more accurately.
+</think>
+
+Sure! Can you help with anything?
+2025-03-03 14:43:50,772 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:43:50,772 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:43:52,792 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:43:52,792 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:46:18,147 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:46:18,151 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:46:20,181 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:46:20,183 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:46:20,203 - __main__ - DEBUG - Sending message to API: i m imad
+2025-03-03 14:46:20,207 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:46:38,826 - urllib3.connectionpool - DEBUG - http://localhost:8000 "POST /chat HTTP/1.1" 200 1470
+2025-03-03 14:46:38,827 - __main__ - DEBUG - Received response: Okay, so I'm trying to figure out what the user is asking for here. The user just said "i m imad." I need to respond to this, but I'm not sure if that's a typo or something else. Let me think.
+
+First, the user wrote "i m imad." That looks like a typo because "imad" doesn't make much sense. Maybe they meant "imad" or "Imad." I should consider both possibilities. If it's "imad," maybe they're referring to a specific product or service. If it's "Imad," perhaps they're asking about something else.
+
+Wait, looking back at the conversation history, the user first asked if the store ships internationally and I confirmed. Then the user responded "can u help me." Maybe they need help with something else, like an order, a product query, or something else.
+
+I should respond in a friendly and helpful manner. Since I can't see the product or service, I'll ask the user to clarify their question. That way, I can provide the most accurate information needed.
+
+I also need to keep the response concise and professional, without internal thoughts. So, I'll make sure it's clear and to the point.
+
+Putting it all together, I'll respond by acknowledging the previous question, letting them know I can help with anything they need, and then ask them to clarify their query.
+</think>
+
+Sure! I can help with any questions or concerns you have. What would be best for you?
+2025-03-03 14:46:38,851 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:46:38,854 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:46:40,872 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:46:40,872 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:50:04,357 - __main__ - DEBUG - Generated new session ID: c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4
+2025-03-03 14:50:04,357 - __main__ - DEBUG - Initialized empty messages list
+2025-03-03 14:50:04,357 - __main__ - DEBUG - Initialized empty context dictionary
+2025-03-03 14:50:04,357 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:50:04,365 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:50:06,398 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:50:06,398 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:50:10,146 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:50:10,150 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:50:12,183 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:50:12,185 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:50:12,203 - __main__ - DEBUG - Sending message to API: hi
+2025-03-03 14:50:12,206 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:50:37,068 - urllib3.connectionpool - DEBUG - http://localhost:8000 "POST /chat HTTP/1.1" 200 2027
+2025-03-03 14:50:37,068 - __main__ - DEBUG - Received response: Hi! How can I assist you today?
+2025-03-03 14:50:37,094 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:50:37,097 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:50:39,158 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:50:39,159 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:51:11,482 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:51:11,490 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:51:13,517 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:51:13,519 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:51:13,539 - __main__ - DEBUG - Sending message to API: i am imad what s ur name
+2025-03-03 14:51:13,543 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:51:28,770 - urllib3.connectionpool - DEBUG - http://localhost:8000 "POST /chat HTTP/1.1" 200 1191
+2025-03-03 14:51:28,770 - __main__ - DEBUG - Received response: Hi! I'm here to help with whatever you need. How can I assist you today?
+2025-03-03 14:51:28,801 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:51:28,803 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:51:30,828 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:51:30,830 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:52:31,026 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:52:31,030 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:52:33,074 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:52:33,075 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:52:33,094 - __main__ - DEBUG - Sending message to API: this chatbot is for what , ur company is doing what
+2025-03-03 14:52:33,096 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:52:54,237 - urllib3.connectionpool - DEBUG - http://localhost:8000 "POST /chat HTTP/1.1" 200 1989
+2025-03-03 14:52:54,237 - __main__ - DEBUG - Received response: Okay, so I need to figure out what this chatbot is for and what the user company is doing. The user mentioned "this chatbot is for what , ur company is doing what." Hmm, that seems a bit vague. I'm not entirely sure what the chatbot is designed for. Maybe it's a tool that helps businesses or companies with some specific tasks? 
+
+Let me think about different chatbots I've heard of. There's the Amazon Best Box Office Chatbot, which is used to answer customer service questions. Then there's the Microsoft Exchange Chatbot, which is used for technical support. But these are examples, and the user didn't specify which one they're referring to.
+
+I wonder if the chatbot's purpose depends on the company's needs. For example, a retail store might use a chatbot for customer service, while a tech company might use it for technical support. Maybe the user is asking about a specific type of chatbot used in their industry.
+
+I should consider other possibilities. There's also something called the "Chatbot for Business" by Stripe, which is designed for businesses to interact with customers. But again, without knowing the specific company, it's hard to pinpoint the exact purpose.
+
+Another angle could be about the functionality of the chatbot. It might be designed to help with answering questions, providing information, or even automating certain tasks. The user might be looking for guidance on how to use the chatbot effectively.
+
+I'm also thinking about how the chatbot can be integrated with other tools or platforms. Maybe it's part of a larger system that helps businesses streamline their operations. But without more details, it's challenging to determine the exact application.
+
+Perhaps the chatbot is meant to gather customer feedback or provide insights into their business performance. It could help in understanding customer needs better, which in turn allows for more tailored
+2025-03-03 14:52:54,260 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:52:54,262 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:52:56,288 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:52:56,291 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:56:15,262 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:56:15,268 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:56:15,375 - __main__ - DEBUG - Tracking order: ORD-100001
+2025-03-03 14:56:15,379 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:56:17,305 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:56:17,307 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:56:17,431 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /track_order/ORD-100001 HTTP/1.1" 200 416
+2025-03-03 14:56:17,433 - __main__ - DEBUG - Order info received: {'order_id': 'ORD-100001', 'customer_name': 'Customer 1', 'email': 'customer1@example.com', 'order_date': '2025-02-17', 'status': 'Delivered', 'shipping_date': '2025-02-18', 'delivery_date': '2025-02-22', 'shipping_address': '562 Main St, City 1, State', 'items': [{'id': 'ITEM-1', 'name': 'Product 57', 'price': 15.9, 'quantity': 3, 'total': 47.7}], 'subtotal': 47.7, 'tax': 3.82, 'shipping_cost': 9.99, 'total': 61.51, 'tracking_number': 'TRK-17281'}
+2025-03-03 14:56:17,436 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:56:17,441 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:56:19,474 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:56:19,475 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:56:29,661 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:56:29,666 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:56:29,775 - __main__ - DEBUG - Tracking order: ORD-100002
+2025-03-03 14:56:29,777 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:56:31,698 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:56:31,700 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:56:31,813 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /track_order/ORD-100002 HTTP/1.1" 200 424
+2025-03-03 14:56:31,815 - __main__ - DEBUG - Order info received: {'order_id': 'ORD-100002', 'customer_name': 'Customer 2', 'email': 'customer2@example.com', 'order_date': '2025-02-05', 'status': 'Delivered', 'shipping_date': '2025-02-06', 'delivery_date': '2025-02-10', 'shipping_address': '100 Main St, City 2, State', 'items': [{'id': 'ITEM-1', 'name': 'Product 15', 'price': 102.94, 'quantity': 2, 'total': 205.88}], 'subtotal': 205.88, 'tax': 16.47, 'shipping_cost': 9.99, 'total': 232.34, 'tracking_number': 'TRK-12983'}
+2025-03-03 14:56:31,817 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:56:31,821 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:56:33,857 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:56:33,858 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:56:36,292 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:56:36,298 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:56:36,375 - __main__ - DEBUG - Tracking order: ORD-10045
+2025-03-03 14:56:36,377 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:56:38,336 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:56:38,337 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:56:38,416 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /track_order/ORD-10045 HTTP/1.1" 200 37
+2025-03-03 14:56:38,418 - __main__ - DEBUG - Order info received: {'error': 'Order ORD-10045 not found'}
+2025-03-03 14:56:38,419 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:56:38,423 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:56:40,470 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 1451
+2025-03-03 14:56:40,472 - __main__ - DEBUG - Retrieved 8 FAQs
+2025-03-03 14:58:36,623 - __main__ - DEBUG - Generated new session ID: 237088ef-3e53-4eac-9611-28ead9c88680
+2025-03-03 14:58:36,624 - __main__ - DEBUG - Initialized empty messages list
+2025-03-03 14:58:36,625 - __main__ - DEBUG - Initialized empty context dictionary
+2025-03-03 14:58:36,627 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:58:36,630 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:58:38,652 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-03 14:58:38,653 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-03 14:58:49,352 - __main__ - DEBUG - Generated new session ID: ba42b4db-fc00-453b-9392-3c70cb3c3da4
+2025-03-03 14:58:49,368 - __main__ - DEBUG - Initialized empty messages list
+2025-03-03 14:58:49,368 - __main__ - DEBUG - Initialized empty context dictionary
+2025-03-03 14:58:49,605 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 14:58:49,610 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 14:58:51,660 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-03 14:58:51,663 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-03 15:00:31,540 - __main__ - DEBUG - Generated new session ID: ec34fb72-e710-45e7-bfff-4ee7b00f75ab
+2025-03-03 15:00:31,540 - __main__ - DEBUG - Initialized empty messages list
+2025-03-03 15:00:31,540 - __main__ - DEBUG - Initialized empty context dictionary
+2025-03-03 15:00:31,540 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 15:00:31,540 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:00:33,587 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-03 15:00:33,587 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-03 15:00:37,312 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 15:00:37,317 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:00:39,348 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-03 15:00:39,350 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-03 15:00:39,399 - __main__ - DEBUG - Sending message to API: hi
+2025-03-03 15:00:39,402 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:00:47,117 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 15:00:47,120 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:00:47,313 - __main__ - DEBUG - Tracking order: ORD-100001
+2025-03-03 15:00:47,315 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:00:48,262 - urllib3.connectionpool - DEBUG - http://localhost:8000 "POST /chat HTTP/1.1" 200 496
+2025-03-03 15:00:49,146 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-03 15:00:49,147 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-03 15:00:49,354 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /track_order/ORD-100001 HTTP/1.1" 200 416
+2025-03-03 15:00:49,356 - __main__ - DEBUG - Order info received: {'order_id': 'ORD-100001', 'customer_name': 'Customer 1', 'email': 'customer1@example.com', 'order_date': '2025-02-17', 'status': 'Delivered', 'shipping_date': '2025-02-18', 'delivery_date': '2025-02-22', 'shipping_address': '562 Main St, City 1, State', 'items': [{'id': 'ITEM-1', 'name': 'Product 57', 'price': 15.9, 'quantity': 3, 'total': 47.7}], 'subtotal': 47.7, 'tax': 3.82, 'shipping_cost': 9.99, 'total': 61.51, 'tracking_number': 'TRK-17281'}
+2025-03-03 15:00:49,360 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 15:00:49,364 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:00:51,402 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-03 15:00:51,404 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-03 15:01:05,056 - __main__ - DEBUG - Generated new session ID: e4b737e8-a929-4cf4-ad9d-a4f96c1918d5
+2025-03-03 15:01:05,056 - __main__ - DEBUG - Initialized empty messages list
+2025-03-03 15:01:05,056 - __main__ - DEBUG - Initialized empty context dictionary
+2025-03-03 15:01:05,056 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 15:01:05,056 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:01:07,107 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-03 15:01:07,107 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-03 15:01:10,127 - __main__ - DEBUG - Generated new session ID: 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:01:10,128 - __main__ - DEBUG - Initialized empty messages list
+2025-03-03 15:01:10,130 - __main__ - DEBUG - Initialized empty context dictionary
+2025-03-03 15:01:10,132 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 15:01:10,134 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:01:12,154 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-03 15:01:12,155 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-03 15:01:14,689 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 15:01:14,694 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:01:16,739 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-03 15:01:16,741 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-03 15:01:16,780 - __main__ - DEBUG - Sending message to API: hi
+2025-03-03 15:01:16,782 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:01:25,532 - urllib3.connectionpool - DEBUG - http://localhost:8000 "POST /chat HTTP/1.1" 200 676
+2025-03-03 15:01:25,590 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 15:01:25,595 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:01:27,620 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-03 15:01:27,620 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-03 15:01:47,611 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 15:01:47,611 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:01:49,646 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-03 15:01:49,648 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-03 15:01:49,691 - __main__ - DEBUG - Sending message to API: can u  help me track my order
+2025-03-03 15:01:49,693 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:01:51,803 - urllib3.connectionpool - DEBUG - http://localhost:8000 "POST /chat HTTP/1.1" 200 214
+2025-03-03 15:01:51,805 - __main__ - DEBUG - Received response: You can track your order by entering your order ID in the order tracking section on our website or by contacting our customer support.
+2025-03-03 15:01:51,838 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 15:01:51,840 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:01:53,886 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-03 15:01:53,887 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-03 15:02:34,174 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 15:02:34,174 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:02:36,215 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-03 15:02:36,216 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-03 15:02:36,260 - __main__ - DEBUG - Sending message to API: plz What is your return policy?
+2025-03-03 15:02:36,261 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:02:38,352 - urllib3.connectionpool - DEBUG - http://localhost:8000 "POST /chat HTTP/1.1" 200 235
+2025-03-03 15:02:38,353 - __main__ - DEBUG - Received response: We accept returns within 30 days of purchase. Items must be in their original condition with tags attached. Please visit our Returns page for more details.
+2025-03-03 15:02:38,382 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 15:02:38,384 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:02:40,422 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-03 15:02:40,423 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-03 15:02:43,621 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 15:02:43,624 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:02:45,656 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-03 15:02:45,658 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-03 15:02:56,347 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 15:02:56,355 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:02:58,402 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-03 15:02:58,404 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-03 15:02:58,457 - __main__ - DEBUG - Sending message to API: do u support visa for payement?
+2025-03-03 15:02:58,460 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:03:09,796 - urllib3.connectionpool - DEBUG - http://localhost:8000 "POST /chat HTTP/1.1" 200 1067
+2025-03-03 15:03:09,797 - __main__ - DEBUG - Received response: Yes, most major credit cards accept payments, including Visa. However, for international purchases, you may need to apply for a visa separately.
+2025-03-03 15:03:09,829 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 15:03:09,833 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:03:11,851 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-03 15:03:11,852 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-03 15:03:22,950 - __main__ - DEBUG - Tracking order: ORD-100001
+2025-03-03 15:03:22,955 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:03:25,007 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /track_order/ORD-100001 HTTP/1.1" 200 416
+2025-03-03 15:03:25,009 - __main__ - DEBUG - Order info received: {'order_id': 'ORD-100001', 'customer_name': 'Customer 1', 'email': 'customer1@example.com', 'order_date': '2025-02-17', 'status': 'Delivered', 'shipping_date': '2025-02-18', 'delivery_date': '2025-02-22', 'shipping_address': '562 Main St, City 1, State', 'items': [{'id': 'ITEM-1', 'name': 'Product 57', 'price': 15.9, 'quantity': 3, 'total': 47.7}], 'subtotal': 47.7, 'tax': 3.82, 'shipping_cost': 9.99, 'total': 61.51, 'tracking_number': 'TRK-17281'}
+2025-03-03 15:03:25,012 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 15:03:25,017 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:03:27,074 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-03 15:03:27,076 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-03 15:04:20,890 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 15:04:20,896 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:04:22,933 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-03 15:04:22,935 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-03 15:04:22,993 - __main__ - DEBUG - Sending message to API: what is ur hq?
+2025-03-03 15:04:22,996 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:04:34,890 - urllib3.connectionpool - DEBUG - http://localhost:8000 "POST /chat HTTP/1.1" 200 1044
+2025-03-03 15:04:34,891 - __main__ - DEBUG - Received response: The company's headquarters is located in [insert location], [insert country/region].
+2025-03-03 15:04:34,914 - __main__ - DEBUG - Retrieving FAQs
+2025-03-03 15:04:34,918 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-03 15:04:36,950 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-03 15:04:36,952 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-04 10:59:24,333 - __main__ - DEBUG - Generated new session ID: 6b05ab5b-25e8-4a9d-841d-df4414994a4c
+2025-03-04 10:59:24,333 - __main__ - DEBUG - Initialized empty messages list
+2025-03-04 10:59:24,333 - __main__ - DEBUG - Initialized empty context dictionary
+2025-03-04 10:59:24,688 - __main__ - DEBUG - Retrieving FAQs
+2025-03-04 10:59:24,708 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-04 10:59:28,787 - __main__ - ERROR - Exception retrieving FAQs: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /faq (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FF49AD6E10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-04 10:59:39,838 - __main__ - DEBUG - Generated new session ID: 647abdd4-533a-410c-a2f4-cfe0217b0d9b
+2025-03-04 10:59:39,841 - __main__ - DEBUG - Initialized empty messages list
+2025-03-04 10:59:39,841 - __main__ - DEBUG - Initialized empty context dictionary
+2025-03-04 10:59:39,846 - __main__ - DEBUG - Retrieving FAQs
+2025-03-04 10:59:39,852 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-04 10:59:41,885 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-04 10:59:41,887 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-04 11:00:04,990 - __main__ - DEBUG - Retrieving FAQs
+2025-03-04 11:00:04,994 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-04 11:00:07,021 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-04 11:00:07,023 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-04 11:00:07,064 - __main__ - DEBUG - Sending message to API: hi
+2025-03-04 11:00:07,065 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-04 11:00:17,919 - urllib3.connectionpool - DEBUG - http://localhost:8000 "POST /chat HTTP/1.1" 200 347
+2025-03-04 11:00:17,922 - __main__ - DEBUG - Received response: Hi there!
+2025-03-04 11:00:17,958 - __main__ - DEBUG - Retrieving FAQs
+2025-03-04 11:00:17,959 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-04 11:00:20,002 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-04 11:00:20,002 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-04 11:00:45,750 - __main__ - DEBUG - Retrieving FAQs
+2025-03-04 11:00:45,750 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-04 11:00:47,777 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-04 11:00:47,777 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-04 11:02:01,465 - __main__ - DEBUG - Retrieving FAQs
+2025-03-04 11:02:01,469 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-04 11:02:01,802 - __main__ - DEBUG - Tracking order: ORD-100001
+2025-03-04 11:02:01,807 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-04 11:02:03,506 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-04 11:02:03,511 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-04 11:02:03,835 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /track_order/ORD-100001 HTTP/1.1" 200 416
+2025-03-04 11:02:03,844 - __main__ - DEBUG - Order info received: {'order_id': 'ORD-100001', 'customer_name': 'Customer 1', 'email': 'customer1@example.com', 'order_date': '2025-02-17', 'status': 'Delivered', 'shipping_date': '2025-02-18', 'delivery_date': '2025-02-22', 'shipping_address': '562 Main St, City 1, State', 'items': [{'id': 'ITEM-1', 'name': 'Product 57', 'price': 15.9, 'quantity': 3, 'total': 47.7}], 'subtotal': 47.7, 'tax': 3.82, 'shipping_cost': 9.99, 'total': 61.51, 'tracking_number': 'TRK-17281'}
+2025-03-04 11:02:03,844 - __main__ - DEBUG - Retrieving FAQs
+2025-03-04 11:02:03,850 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-04 11:02:05,893 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-04 11:02:05,896 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-05 22:33:29,959 - __main__ - DEBUG - Generated new session ID: 486b3540-55e8-460e-b128-698cc6135a4e
+2025-03-05 22:33:29,961 - __main__ - DEBUG - Initialized empty messages list
+2025-03-05 22:33:29,961 - __main__ - DEBUG - Initialized empty context dictionary
+2025-03-05 22:33:30,124 - __main__ - DEBUG - Retrieving FAQs
+2025-03-05 22:33:30,128 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-05 22:33:32,165 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-05 22:33:32,165 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-05 22:33:40,921 - __main__ - DEBUG - Retrieving FAQs
+2025-03-05 22:33:40,923 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-05 22:33:42,967 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-05 22:33:42,968 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-05 22:33:42,988 - __main__ - DEBUG - Sending message to API: hi
+2025-03-05 22:33:42,989 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-05 22:33:48,121 - urllib3.connectionpool - DEBUG - http://localhost:8000 "POST /chat HTTP/1.1" 200 307
+2025-03-05 22:33:48,121 - __main__ - DEBUG - Received response: hi! how can i assist you today?
+2025-03-05 22:33:48,140 - __main__ - DEBUG - Retrieving FAQs
+2025-03-05 22:33:48,142 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-05 22:33:50,192 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-05 22:33:50,193 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-05 22:34:25,622 - __main__ - DEBUG - Retrieving FAQs
+2025-03-05 22:34:25,623 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-05 22:34:25,850 - __main__ - DEBUG - Tracking order: ORD-100001
+2025-03-05 22:34:25,853 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-05 22:34:27,652 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-05 22:34:27,653 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-05 22:34:27,889 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /track_order/ORD-100001 HTTP/1.1" 200 416
+2025-03-05 22:34:27,890 - __main__ - DEBUG - Order info received: {'order_id': 'ORD-100001', 'customer_name': 'Customer 1', 'email': 'customer1@example.com', 'order_date': '2025-02-17', 'status': 'Delivered', 'shipping_date': '2025-02-18', 'delivery_date': '2025-02-22', 'shipping_address': '562 Main St, City 1, State', 'items': [{'id': 'ITEM-1', 'name': 'Product 57', 'price': 15.9, 'quantity': 3, 'total': 47.7}], 'subtotal': 47.7, 'tax': 3.82, 'shipping_cost': 9.99, 'total': 61.51, 'tracking_number': 'TRK-17281'}
+2025-03-05 22:34:27,891 - __main__ - DEBUG - Retrieving FAQs
+2025-03-05 22:34:27,893 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-05 22:34:29,921 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-05 22:34:29,922 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-05 22:34:31,191 - __main__ - DEBUG - Retrieving FAQs
+2025-03-05 22:34:31,193 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-05 22:34:32,418 - __main__ - DEBUG - Tracking order: ORD-10001
+2025-03-05 22:34:32,420 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-05 22:34:33,258 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-05 22:34:33,258 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-05 22:34:34,439 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /track_order/ORD-10001 HTTP/1.1" 200 37
+2025-03-05 22:34:34,440 - __main__ - DEBUG - Order info received: {'error': 'Order ORD-10001 not found'}
+2025-03-05 22:34:34,441 - __main__ - DEBUG - Retrieving FAQs
+2025-03-05 22:34:34,443 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-05 22:34:36,473 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-05 22:34:36,474 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-05 22:34:47,032 - __main__ - DEBUG - Retrieving FAQs
+2025-03-05 22:34:47,034 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-05 22:34:49,079 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-05 22:34:49,080 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-05 22:34:49,106 - __main__ - DEBUG - Sending message to API: can u help me track my order
+2025-03-05 22:34:49,107 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-05 22:34:51,161 - urllib3.connectionpool - DEBUG - http://localhost:8000 "POST /chat HTTP/1.1" 200 214
+2025-03-05 22:34:51,161 - __main__ - DEBUG - Received response: You can track your order by entering your order ID in the order tracking section on our website or by contacting our customer support.
+2025-03-05 22:34:51,182 - __main__ - DEBUG - Retrieving FAQs
+2025-03-05 22:34:51,184 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:8000
+2025-03-05 22:34:53,229 - urllib3.connectionpool - DEBUG - http://localhost:8000 "GET /faq HTTP/1.1" 200 9124
+2025-03-05 22:34:53,229 - __main__ - DEBUG - Retrieved 45 FAQs
+2025-03-05 22:35:00,228 - git.cmd - DEBUG - Popen(['git', 'version'], cwd=C:\Users\imadh\PycharmProjects\customer__agent, stdin=None, shell=False, universal_newlines=False)
+2025-03-05 22:35:00,271 - git.cmd - DEBUG - Popen(['git', 'rev-parse', '--show-toplevel'], cwd=C:\Users\imadh\PycharmProjects\customer__agent, stdin=None, shell=False, universal_newlines=False)
+2025-03-05 22:35:00,312 - git.cmd - DEBUG - Popen(['git', 'remote', 'get-url', '--all', 'origin'], cwd=C:\Users\imadh\PycharmProjects\customer__agent, stdin=None, shell=False, universal_newlines=False)
+2025-03-05 22:35:00,356 - git.cmd - DEBUG - Popen(['git', 'status', '--porcelain', '--untracked-files'], cwd=C:\Users\imadh\PycharmProjects\customer__agent, stdin=None, shell=False, universal_newlines=False)
+2025-03-05 22:35:00,410 - git.cmd - DEBUG - Popen(['git', 'diff', '--abbrev=40', '--full-index', '-M', '--raw', '-z', '--no-color'], cwd=C:\Users\imadh\PycharmProjects\customer__agent, stdin=None, shell=False, universal_newlines=False)
+2025-03-05 22:35:00,465 - git.cmd - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=C:\Users\imadh\PycharmProjects\customer__agent, stdin=<valid stream>, shell=False, universal_newlines=False)
+2025-03-05 22:35:00,525 - git.cmd - DEBUG - Popen(['git', 'rev-list', 'origin/main..main', '--'], cwd=C:\Users\imadh\PycharmProjects\customer__agent, stdin=None, shell=False, universal_newlines=False)

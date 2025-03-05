@@ -1,0 +1,845 @@
+2025-03-03 14:34:51,850 - chatbot_agents.chatbot_agent - INFO - Initializing chatbot agent
+2025-03-03 14:34:51,851 - models.deepseek_model - INFO - Initializing DeepSeek model: deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
+2025-03-03 14:34:51,857 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-03 14:34:52,363 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-03 14:34:52,839 - models.deepseek_model - DEBUG - Tokenizer loaded successfully
+2025-03-03 14:34:54,133 - models.deepseek_model - DEBUG - Using device: cuda
+2025-03-03 14:34:54,333 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-03 14:35:00,059 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2025-03-03 14:35:00,657 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2025-03-03 14:35:00,658 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2025-03-03 14:35:00,658 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2025-03-03 14:35:00,658 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2025-03-03 14:35:11,264 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B/resolve/main/generation_config.json HTTP/1.1" 200 0
+2025-03-03 14:35:11,288 - models.deepseek_model - INFO - Model loaded successfully on cuda
+2025-03-03 14:35:11,289 - chatbot_agents.chatbot_agent - DEBUG - Initialized DeepSeek model
+2025-03-03 14:35:11,290 - services.faq_retrieval - INFO - Initializing FAQ retrieval service
+2025-03-03 14:35:15,800 - tensorflow - WARNING - From C:\Users\imadh\anaconda3\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-03 14:35:16,407 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2025-03-03 14:35:16,407 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-03 14:35:16,535 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-03 14:35:16,675 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-03 14:35:16,812 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-03 14:35:16,970 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-03 14:35:17,102 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-03 14:35:17,243 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-03 14:35:17,697 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-03 14:35:17,930 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6758
+2025-03-03 14:35:18,227 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6758
+2025-03-03 14:35:18,468 - services.faq_retrieval - DEBUG - Loaded embedding model: sentence-transformers/all-MiniLM-L6-v2
+2025-03-03 14:35:18,469 - services.faq_retrieval - DEBUG - Loading existing FAQ data from C:\Users\imadh\PycharmProjects\customer__agent\data\faqs.json
+2025-03-03 14:35:18,470 - services.faq_retrieval - INFO - Loaded 8 FAQs
+2025-03-03 14:35:18,472 - services.faq_retrieval - DEBUG - Initializing FAISS vector store
+2025-03-03 14:35:18,666 - faiss.loader - DEBUG - Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2025-03-03 14:35:18,666 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2025-03-03 14:35:18,667 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-03-03 14:35:18,667 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-03-03 14:35:18,778 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-03-03 14:35:18,789 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes.
+2025-03-03 14:35:18,791 - services.faq_retrieval - INFO - Initialized vector store with 8 FAQ documents
+2025-03-03 14:35:18,792 - chatbot_agents.chatbot_agent - DEBUG - Initialized FAQ retrieval service
+2025-03-03 14:35:18,792 - services.memory - INFO - Initializing conversation memory service
+2025-03-03 14:35:18,792 - services.memory - DEBUG - Conversation memory service initialized
+2025-03-03 14:35:18,793 - chatbot_agents.chatbot_agent - DEBUG - Initialized conversation memory service
+2025-03-03 14:35:18,793 - services.order_tracking - INFO - Initializing order tracking service
+2025-03-03 14:35:18,794 - services.order_tracking - INFO - Order data file not found. Creating sample order data at C:\Users\imadh\PycharmProjects\customer__agent\data\orders.json
+2025-03-03 14:35:18,798 - services.order_tracking - INFO - Created sample order data with 20 orders
+2025-03-03 14:35:18,798 - services.order_tracking - DEBUG - Order tracking service initialized
+2025-03-03 14:35:18,799 - chatbot_agents.chatbot_agent - DEBUG - Initialized order tracking service
+2025-03-03 14:35:18,800 - chatbot_agents.chatbot_agent - INFO - Chatbot agent initialized successfully
+2025-03-03 14:35:18,807 - __main__ - INFO - Starting Customer Service Chatbot API on 0.0.0.0:8000
+2025-03-03 14:35:18,816 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-03-03 14:35:43,721 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:35:52,263 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:35:54,320 - __main__ - DEBUG - Received chat request: hi (Session ID: e2485cd1-1258-47eb-b14b-5fc4d1344d99)
+2025-03-03 14:35:54,321 - chatbot_agents.chatbot_agent - DEBUG - Processing message for session e2485cd1-1258-47eb-b14b-5fc4d1344d99: hi
+2025-03-03 14:35:54,321 - services.memory - DEBUG - No context found for session e2485cd1-1258-47eb-b14b-5fc4d1344d99
+2025-03-03 14:35:54,322 - services.memory - DEBUG - Creating new conversation history for session e2485cd1-1258-47eb-b14b-5fc4d1344d99
+2025-03-03 14:35:54,323 - services.memory - DEBUG - Added user message to session e2485cd1-1258-47eb-b14b-5fc4d1344d99
+2025-03-03 14:35:54,326 - chatbot_agents.chatbot_agent - DEBUG - No order ID found in message
+2025-03-03 14:35:54,326 - services.faq_retrieval - DEBUG - Retrieving FAQs for query: hi
+2025-03-03 14:35:54,414 - services.faq_retrieval - DEBUG - Retrieved 1 relevant FAQs
+2025-03-03 14:35:54,415 - services.faq_retrieval - DEBUG - Query does not closely match any FAQ
+2025-03-03 14:35:54,415 - chatbot_agents.chatbot_agent - DEBUG - Using language model for response
+2025-03-03 14:35:54,416 - chatbot_agents.chatbot_agent - DEBUG - Generating model response
+2025-03-03 14:35:54,417 - services.memory - DEBUG - Retrieved 1 messages for session e2485cd1-1258-47eb-b14b-5fc4d1344d99
+2025-03-03 14:35:54,417 - models.deepseek_model - DEBUG - Generating response for prompt: hi...
+2025-03-03 14:36:17,757 - models.deepseek_model - DEBUG - Generated response: Okay, so I need to figure out what the user is ask...
+2025-03-03 14:36:17,758 - chatbot_agents.chatbot_agent - DEBUG - Model generated response: Okay, so I need to figure out what the user is ask...
+2025-03-03 14:36:17,759 - services.memory - DEBUG - Added assistant message to session e2485cd1-1258-47eb-b14b-5fc4d1344d99
+2025-03-03 14:36:17,759 - services.memory - DEBUG - No context found for session e2485cd1-1258-47eb-b14b-5fc4d1344d99
+2025-03-03 14:36:17,759 - chatbot_agents.chatbot_agent - DEBUG - Generated response for session e2485cd1-1258-47eb-b14b-5fc4d1344d99: Okay, so I need to figure out what the user is ask...
+2025-03-03 14:36:17,760 - __main__ - DEBUG - Generated response: Okay, so I need to figure out what the user is asking for here. They provided a conversation history where the user just said "hi". It looks like they're greeting me. My role is to respond in a friendly and helpful manner, but I need to make sure I'm accurate and concise.
+
+Hmm, the user didn't ask any specific question, just said "hi". So, I should probably acknowledge their greeting and offer assistance. Maybe I can start with a friendly message and then ask them how I can help. That way, I'm keeping the conversation open and inviting them to provide more details if they have a specific question.
+
+Wait, I should make sure my response isn't too long. The user mentioned "order tracking", "product information", "returns", and other customer service issues. Since they didn't specify, it's safer to ask for more details. But I shouldn't overwhelm them with too many options. Maybe I can list a few common areas where they might need help and ask which one they're interested in.
+
+Alternatively, I could just ask them to share any information they have so I can assist better. But I don't want to assume anything. It's better to be polite and open-ended. So, maybe I can start by thanking them for the greeting, then ask them to elaborate on what they need help with. That way, I can provide targeted assistance without making them feel like they're guessing.
+
+I should also keep the tone friendly and approachable. Maybe something like, "Hi! I'm here to help with any questions you have." That sounds professional and inviting. I don't want to come off as too technical or too casual. It's important to strike a balance between being helpful and maintaining a comfortable interaction.
+
+Wait, let me read the example response they gave. It was "Hi! I'm here to help with any questions you have." That's pretty much what I should do. It's concise, friendly, and clear. It doesn't ask for specific details but invites them to share more information (Session ID: e2485cd1-1258-47eb-b14b-5fc4d1344d99)
+2025-03-03 14:36:19,820 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:40:14,423 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:40:16,492 - __main__ - DEBUG - Received chat request: what s ur bot (Session ID: e2485cd1-1258-47eb-b14b-5fc4d1344d99)
+2025-03-03 14:40:16,493 - chatbot_agents.chatbot_agent - DEBUG - Processing message for session e2485cd1-1258-47eb-b14b-5fc4d1344d99: what s ur bot
+2025-03-03 14:40:16,493 - services.memory - DEBUG - No context found for session e2485cd1-1258-47eb-b14b-5fc4d1344d99
+2025-03-03 14:40:16,494 - services.memory - DEBUG - Added user message to session e2485cd1-1258-47eb-b14b-5fc4d1344d99
+2025-03-03 14:40:16,495 - chatbot_agents.chatbot_agent - DEBUG - No order ID found in message
+2025-03-03 14:40:16,496 - services.faq_retrieval - DEBUG - Retrieving FAQs for query: what s ur bot
+2025-03-03 14:40:16,530 - services.faq_retrieval - DEBUG - Retrieved 1 relevant FAQs
+2025-03-03 14:40:16,531 - services.faq_retrieval - DEBUG - Query does not closely match any FAQ
+2025-03-03 14:40:16,532 - chatbot_agents.chatbot_agent - DEBUG - Using language model for response
+2025-03-03 14:40:16,532 - chatbot_agents.chatbot_agent - DEBUG - Generating model response
+2025-03-03 14:40:16,532 - services.memory - DEBUG - Retrieved 3 messages for session e2485cd1-1258-47eb-b14b-5fc4d1344d99
+2025-03-03 14:40:16,534 - models.deepseek_model - DEBUG - Generating response for prompt: what s ur bot...
+2025-03-03 14:40:16,543 - models.deepseek_model - ERROR - Error generating response: Input length of input_ids is 522, but `max_length` is set to 512. This can lead to unexpected behavior. You should consider increasing `max_length` or, better yet, setting `max_new_tokens`.
+2025-03-03 14:40:16,543 - chatbot_agents.chatbot_agent - DEBUG - Model generated response: I'm having trouble processing your request. Please...
+2025-03-03 14:40:16,544 - services.memory - DEBUG - Added assistant message to session e2485cd1-1258-47eb-b14b-5fc4d1344d99
+2025-03-03 14:40:16,544 - services.memory - DEBUG - No context found for session e2485cd1-1258-47eb-b14b-5fc4d1344d99
+2025-03-03 14:40:16,545 - chatbot_agents.chatbot_agent - DEBUG - Generated response for session e2485cd1-1258-47eb-b14b-5fc4d1344d99: I'm having trouble processing your request. Please...
+2025-03-03 14:40:16,546 - __main__ - DEBUG - Generated response: I'm having trouble processing your request. Please try again later. (Error: Input length of input_ids is 522, but `max_length` is set to 512. This can lead to unexpected behavior. You should consider increasing `max_length` or, better yet, setting `max_new_tokens`.) (Session ID: e2485cd1-1258-47eb-b14b-5fc4d1344d99)
+2025-03-03 14:40:18,609 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:40:30,045 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:40:32,101 - __main__ - DEBUG - Received chat request: okey (Session ID: e2485cd1-1258-47eb-b14b-5fc4d1344d99)
+2025-03-03 14:40:32,103 - chatbot_agents.chatbot_agent - DEBUG - Processing message for session e2485cd1-1258-47eb-b14b-5fc4d1344d99: okey
+2025-03-03 14:40:32,103 - services.memory - DEBUG - No context found for session e2485cd1-1258-47eb-b14b-5fc4d1344d99
+2025-03-03 14:40:32,104 - services.memory - DEBUG - Added user message to session e2485cd1-1258-47eb-b14b-5fc4d1344d99
+2025-03-03 14:40:32,104 - chatbot_agents.chatbot_agent - DEBUG - No order ID found in message
+2025-03-03 14:40:32,105 - services.faq_retrieval - DEBUG - Retrieving FAQs for query: okey
+2025-03-03 14:40:32,122 - services.faq_retrieval - DEBUG - Retrieved 1 relevant FAQs
+2025-03-03 14:40:32,122 - services.faq_retrieval - DEBUG - Query does not closely match any FAQ
+2025-03-03 14:40:32,123 - chatbot_agents.chatbot_agent - DEBUG - Using language model for response
+2025-03-03 14:40:32,123 - chatbot_agents.chatbot_agent - DEBUG - Generating model response
+2025-03-03 14:40:32,124 - services.memory - DEBUG - Retrieved 5 messages for session e2485cd1-1258-47eb-b14b-5fc4d1344d99
+2025-03-03 14:40:32,124 - models.deepseek_model - DEBUG - Generating response for prompt: okey...
+2025-03-03 14:40:32,135 - models.deepseek_model - ERROR - Error generating response: Input length of input_ids is 592, but `max_length` is set to 512. This can lead to unexpected behavior. You should consider increasing `max_length` or, better yet, setting `max_new_tokens`.
+2025-03-03 14:40:32,136 - chatbot_agents.chatbot_agent - DEBUG - Model generated response: I'm having trouble processing your request. Please...
+2025-03-03 14:40:32,136 - services.memory - DEBUG - Added assistant message to session e2485cd1-1258-47eb-b14b-5fc4d1344d99
+2025-03-03 14:40:32,137 - services.memory - DEBUG - No context found for session e2485cd1-1258-47eb-b14b-5fc4d1344d99
+2025-03-03 14:40:32,137 - chatbot_agents.chatbot_agent - DEBUG - Generated response for session e2485cd1-1258-47eb-b14b-5fc4d1344d99: I'm having trouble processing your request. Please...
+2025-03-03 14:40:32,138 - __main__ - DEBUG - Generated response: I'm having trouble processing your request. Please try again later. (Error: Input length of input_ids is 592, but `max_length` is set to 512. This can lead to unexpected behavior. You should consider increasing `max_length` or, better yet, setting `max_new_tokens`.) (Session ID: e2485cd1-1258-47eb-b14b-5fc4d1344d99)
+2025-03-03 14:40:34,207 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:41:10,138 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:41:16,287 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:42:34,538 - chatbot_agents.chatbot_agent - INFO - Initializing chatbot agent
+2025-03-03 14:42:34,538 - models.deepseek_model - INFO - Initializing DeepSeek model: deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
+2025-03-03 14:42:34,554 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-03 14:42:35,175 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-03 14:42:35,575 - models.deepseek_model - DEBUG - Tokenizer loaded successfully
+2025-03-03 14:42:36,791 - models.deepseek_model - DEBUG - Using device: cuda
+2025-03-03 14:42:36,934 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-03 14:42:40,449 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2025-03-03 14:42:40,839 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2025-03-03 14:42:40,839 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2025-03-03 14:42:40,839 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2025-03-03 14:42:40,839 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2025-03-03 14:42:46,923 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B/resolve/main/generation_config.json HTTP/1.1" 200 0
+2025-03-03 14:42:46,944 - models.deepseek_model - INFO - Model loaded successfully on cuda
+2025-03-03 14:42:46,944 - chatbot_agents.chatbot_agent - DEBUG - Initialized DeepSeek model
+2025-03-03 14:42:46,944 - services.faq_retrieval - INFO - Initializing FAQ retrieval service
+2025-03-03 14:42:51,440 - tensorflow - WARNING - From C:\Users\imadh\anaconda3\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-03 14:42:51,963 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2025-03-03 14:42:51,963 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-03 14:42:52,097 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-03 14:42:52,241 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-03 14:42:52,377 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-03 14:42:52,513 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-03 14:42:52,652 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-03 14:42:52,783 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-03 14:42:53,233 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-03 14:42:53,427 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6758
+2025-03-03 14:42:53,580 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6758
+2025-03-03 14:42:53,665 - services.faq_retrieval - DEBUG - Loaded embedding model: sentence-transformers/all-MiniLM-L6-v2
+2025-03-03 14:42:53,665 - services.faq_retrieval - DEBUG - Loading existing FAQ data from C:\Users\imadh\PycharmProjects\customer__agent\data\faqs.json
+2025-03-03 14:42:53,666 - services.faq_retrieval - INFO - Loaded 8 FAQs
+2025-03-03 14:42:53,666 - services.faq_retrieval - DEBUG - Initializing FAISS vector store
+2025-03-03 14:42:53,866 - faiss.loader - DEBUG - Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2025-03-03 14:42:53,866 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2025-03-03 14:42:53,867 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-03-03 14:42:53,867 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-03-03 14:42:53,896 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-03-03 14:42:53,904 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes.
+2025-03-03 14:42:53,906 - services.faq_retrieval - INFO - Initialized vector store with 8 FAQ documents
+2025-03-03 14:42:53,906 - chatbot_agents.chatbot_agent - DEBUG - Initialized FAQ retrieval service
+2025-03-03 14:42:53,906 - services.memory - INFO - Initializing conversation memory service
+2025-03-03 14:42:53,907 - services.memory - DEBUG - Conversation memory service initialized
+2025-03-03 14:42:53,907 - chatbot_agents.chatbot_agent - DEBUG - Initialized conversation memory service
+2025-03-03 14:42:53,907 - services.order_tracking - INFO - Initializing order tracking service
+2025-03-03 14:42:53,908 - services.order_tracking - DEBUG - Loading existing order data from C:\Users\imadh\PycharmProjects\customer__agent\data\orders.json
+2025-03-03 14:42:53,908 - services.order_tracking - INFO - Loaded 20 orders
+2025-03-03 14:42:53,909 - services.order_tracking - DEBUG - Order tracking service initialized
+2025-03-03 14:42:53,909 - chatbot_agents.chatbot_agent - DEBUG - Initialized order tracking service
+2025-03-03 14:42:53,909 - chatbot_agents.chatbot_agent - INFO - Chatbot agent initialized successfully
+2025-03-03 14:42:53,916 - __main__ - INFO - Starting Customer Service Chatbot API on 0.0.0.0:8000
+2025-03-03 14:42:53,924 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-03-03 14:43:08,151 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:43:22,324 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:43:24,401 - __main__ - DEBUG - Received chat request: Do you ship internationally? (Session ID: 74998bb0-3057-41fd-b0c3-d16de2869837)
+2025-03-03 14:43:24,402 - chatbot_agents.chatbot_agent - DEBUG - Processing message for session 74998bb0-3057-41fd-b0c3-d16de2869837: Do you ship internationally?
+2025-03-03 14:43:24,403 - services.memory - DEBUG - No context found for session 74998bb0-3057-41fd-b0c3-d16de2869837
+2025-03-03 14:43:24,403 - services.memory - DEBUG - Creating new conversation history for session 74998bb0-3057-41fd-b0c3-d16de2869837
+2025-03-03 14:43:24,404 - services.memory - DEBUG - Added user message to session 74998bb0-3057-41fd-b0c3-d16de2869837
+2025-03-03 14:43:24,407 - chatbot_agents.chatbot_agent - DEBUG - No order ID found in message
+2025-03-03 14:43:24,408 - services.faq_retrieval - DEBUG - Retrieving FAQs for query: Do you ship internationally?
+2025-03-03 14:43:24,452 - services.faq_retrieval - DEBUG - Retrieved 1 relevant FAQs
+2025-03-03 14:43:24,453 - services.faq_retrieval - DEBUG - Query matches FAQ with similarity 0.9999999999998828
+2025-03-03 14:43:24,453 - chatbot_agents.chatbot_agent - DEBUG - Detected FAQ question
+2025-03-03 14:43:24,453 - chatbot_agents.chatbot_agent - DEBUG - Handling FAQ question
+2025-03-03 14:43:24,453 - services.faq_retrieval - DEBUG - Retrieving FAQs for query: Do you ship internationally?
+2025-03-03 14:43:24,468 - services.faq_retrieval - DEBUG - Retrieved 1 relevant FAQs
+2025-03-03 14:43:24,468 - services.faq_retrieval - DEBUG - Query matches FAQ with similarity 0.9999999999998828
+2025-03-03 14:43:24,469 - chatbot_agents.chatbot_agent - DEBUG - Found matching FAQ: Do you ship internationally?
+2025-03-03 14:43:24,470 - services.memory - DEBUG - Added assistant message to session 74998bb0-3057-41fd-b0c3-d16de2869837
+2025-03-03 14:43:24,470 - services.memory - DEBUG - No context found for session 74998bb0-3057-41fd-b0c3-d16de2869837
+2025-03-03 14:43:24,470 - chatbot_agents.chatbot_agent - DEBUG - Generated response for session 74998bb0-3057-41fd-b0c3-d16de2869837: Yes, we ship to most countries worldwide. Internat...
+2025-03-03 14:43:24,471 - __main__ - DEBUG - Generated response: Yes, we ship to most countries worldwide. International shipping times vary by destination, typically taking 7-14 business days. (Session ID: 74998bb0-3057-41fd-b0c3-d16de2869837)
+2025-03-03 14:43:26,545 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:43:37,636 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:43:39,731 - __main__ - DEBUG - Received chat request: can u help me (Session ID: 74998bb0-3057-41fd-b0c3-d16de2869837)
+2025-03-03 14:43:39,732 - chatbot_agents.chatbot_agent - DEBUG - Processing message for session 74998bb0-3057-41fd-b0c3-d16de2869837: can u help me
+2025-03-03 14:43:39,732 - services.memory - DEBUG - No context found for session 74998bb0-3057-41fd-b0c3-d16de2869837
+2025-03-03 14:43:39,733 - services.memory - DEBUG - Added user message to session 74998bb0-3057-41fd-b0c3-d16de2869837
+2025-03-03 14:43:39,734 - chatbot_agents.chatbot_agent - DEBUG - No order ID found in message
+2025-03-03 14:43:39,735 - services.faq_retrieval - DEBUG - Retrieving FAQs for query: can u help me
+2025-03-03 14:43:39,759 - services.faq_retrieval - DEBUG - Retrieved 1 relevant FAQs
+2025-03-03 14:43:39,760 - services.faq_retrieval - DEBUG - Query does not closely match any FAQ
+2025-03-03 14:43:39,761 - chatbot_agents.chatbot_agent - DEBUG - Using language model for response
+2025-03-03 14:43:39,761 - chatbot_agents.chatbot_agent - DEBUG - Generating model response
+2025-03-03 14:43:39,762 - services.memory - DEBUG - Retrieved 3 messages for session 74998bb0-3057-41fd-b0c3-d16de2869837
+2025-03-03 14:43:39,763 - models.deepseek_model - DEBUG - Generating response for prompt: can u help me...
+2025-03-03 14:43:50,741 - models.deepseek_model - DEBUG - Generated response: Okay, so the user initially asked me if we ship in...
+2025-03-03 14:43:50,741 - chatbot_agents.chatbot_agent - DEBUG - Model generated response: Okay, so the user initially asked me if we ship in...
+2025-03-03 14:43:50,741 - services.memory - DEBUG - Added assistant message to session 74998bb0-3057-41fd-b0c3-d16de2869837
+2025-03-03 14:43:50,741 - services.memory - DEBUG - No context found for session 74998bb0-3057-41fd-b0c3-d16de2869837
+2025-03-03 14:43:50,741 - chatbot_agents.chatbot_agent - DEBUG - Generated response for session 74998bb0-3057-41fd-b0c3-d16de2869837: Okay, so the user initially asked me if we ship in...
+2025-03-03 14:43:50,751 - __main__ - DEBUG - Generated response: Okay, so the user initially asked me if we ship internationally. I told them yes and mentioned the shipping times. Now, they've just sent "can u help me." I need to figure out what they're really looking for.
+
+"Can you help me" is a bit vague. It could mean a few things. Maybe they have a specific question or need assistance with something they're doing. But since I don't have their context, I should assume they're seeking help with something related to their business, like ordering, shipping, customer support, etc.
+
+I should respond in a friendly and helpful manner. Maybe ask them to provide more details so I can assist better. Keeping it concise and professional is key here. I don't want to overcomplicate it, but I also need to make sure I cover the most common areas they might need help with.
+
+So, I'll start by thanking them for asking and then ask if they need help with something specific. That way, I can address their needs more accurately.
+</think>
+
+Sure! Can you help with anything? (Session ID: 74998bb0-3057-41fd-b0c3-d16de2869837)
+2025-03-03 14:43:52,792 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:46:20,178 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:46:22,253 - __main__ - DEBUG - Received chat request: i m imad (Session ID: 74998bb0-3057-41fd-b0c3-d16de2869837)
+2025-03-03 14:46:22,254 - chatbot_agents.chatbot_agent - DEBUG - Processing message for session 74998bb0-3057-41fd-b0c3-d16de2869837: i m imad
+2025-03-03 14:46:22,254 - services.memory - DEBUG - No context found for session 74998bb0-3057-41fd-b0c3-d16de2869837
+2025-03-03 14:46:22,255 - services.memory - DEBUG - Added user message to session 74998bb0-3057-41fd-b0c3-d16de2869837
+2025-03-03 14:46:22,256 - chatbot_agents.chatbot_agent - DEBUG - No order ID found in message
+2025-03-03 14:46:22,257 - services.faq_retrieval - DEBUG - Retrieving FAQs for query: i m imad
+2025-03-03 14:46:22,282 - services.faq_retrieval - DEBUG - Retrieved 1 relevant FAQs
+2025-03-03 14:46:22,282 - services.faq_retrieval - DEBUG - Query does not closely match any FAQ
+2025-03-03 14:46:22,282 - chatbot_agents.chatbot_agent - DEBUG - Using language model for response
+2025-03-03 14:46:22,283 - chatbot_agents.chatbot_agent - DEBUG - Generating model response
+2025-03-03 14:46:22,283 - services.memory - DEBUG - Retrieved 5 messages for session 74998bb0-3057-41fd-b0c3-d16de2869837
+2025-03-03 14:46:22,284 - models.deepseek_model - DEBUG - Generating response for prompt: i m imad...
+2025-03-03 14:46:38,822 - models.deepseek_model - DEBUG - Generated response: Okay, so I'm trying to figure out what the user is...
+2025-03-03 14:46:38,823 - chatbot_agents.chatbot_agent - DEBUG - Model generated response: Okay, so I'm trying to figure out what the user is...
+2025-03-03 14:46:38,823 - services.memory - DEBUG - Added assistant message to session 74998bb0-3057-41fd-b0c3-d16de2869837
+2025-03-03 14:46:38,824 - services.memory - DEBUG - No context found for session 74998bb0-3057-41fd-b0c3-d16de2869837
+2025-03-03 14:46:38,824 - chatbot_agents.chatbot_agent - DEBUG - Generated response for session 74998bb0-3057-41fd-b0c3-d16de2869837: Okay, so I'm trying to figure out what the user is...
+2025-03-03 14:46:38,825 - __main__ - DEBUG - Generated response: Okay, so I'm trying to figure out what the user is asking for here. The user just said "i m imad." I need to respond to this, but I'm not sure if that's a typo or something else. Let me think.
+
+First, the user wrote "i m imad." That looks like a typo because "imad" doesn't make much sense. Maybe they meant "imad" or "Imad." I should consider both possibilities. If it's "imad," maybe they're referring to a specific product or service. If it's "Imad," perhaps they're asking about something else.
+
+Wait, looking back at the conversation history, the user first asked if the store ships internationally and I confirmed. Then the user responded "can u help me." Maybe they need help with something else, like an order, a product query, or something else.
+
+I should respond in a friendly and helpful manner. Since I can't see the product or service, I'll ask the user to clarify their question. That way, I can provide the most accurate information needed.
+
+I also need to keep the response concise and professional, without internal thoughts. So, I'll make sure it's clear and to the point.
+
+Putting it all together, I'll respond by acknowledging the previous question, letting them know I can help with anything they need, and then ask them to clarify their query.
+</think>
+
+Sure! I can help with any questions or concerns you have. What would be best for you? (Session ID: 74998bb0-3057-41fd-b0c3-d16de2869837)
+2025-03-03 14:46:40,872 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:49:40,545 - chatbot_agents.chatbot_agent - INFO - Initializing chatbot agent
+2025-03-03 14:49:40,545 - models.deepseek_model - INFO - Initializing DeepSeek model: deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
+2025-03-03 14:49:40,545 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-03 14:49:41,284 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-03 14:49:41,774 - models.deepseek_model - DEBUG - Tokenizer loaded successfully
+2025-03-03 14:49:42,460 - models.deepseek_model - DEBUG - Using device: cuda
+2025-03-03 14:49:42,607 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-03 14:49:46,194 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2025-03-03 14:49:46,583 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2025-03-03 14:49:46,584 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2025-03-03 14:49:46,584 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2025-03-03 14:49:46,584 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2025-03-03 14:49:52,601 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B/resolve/main/generation_config.json HTTP/1.1" 200 0
+2025-03-03 14:49:52,625 - models.deepseek_model - INFO - Model loaded successfully on cuda
+2025-03-03 14:49:52,625 - chatbot_agents.chatbot_agent - DEBUG - Initialized DeepSeek model
+2025-03-03 14:49:52,626 - services.faq_retrieval - INFO - Initializing FAQ retrieval service
+2025-03-03 14:49:56,856 - tensorflow - WARNING - From C:\Users\imadh\anaconda3\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-03 14:49:57,341 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2025-03-03 14:49:57,343 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-03 14:49:57,508 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-03 14:49:57,683 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-03 14:49:57,829 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-03 14:49:57,971 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-03 14:49:58,508 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-03 14:49:58,644 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-03 14:49:59,081 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-03 14:49:59,310 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6758
+2025-03-03 14:49:59,484 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6758
+2025-03-03 14:49:59,572 - services.faq_retrieval - DEBUG - Loaded embedding model: sentence-transformers/all-MiniLM-L6-v2
+2025-03-03 14:49:59,572 - services.faq_retrieval - DEBUG - Loading existing FAQ data from C:\Users\imadh\PycharmProjects\customer__agent\data\faqs.json
+2025-03-03 14:49:59,573 - services.faq_retrieval - INFO - Loaded 8 FAQs
+2025-03-03 14:49:59,573 - services.faq_retrieval - DEBUG - Initializing FAISS vector store
+2025-03-03 14:49:59,769 - faiss.loader - DEBUG - Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2025-03-03 14:49:59,769 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2025-03-03 14:49:59,769 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-03-03 14:49:59,769 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-03-03 14:49:59,800 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-03-03 14:49:59,810 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes.
+2025-03-03 14:49:59,810 - services.faq_retrieval - INFO - Initialized vector store with 8 FAQ documents
+2025-03-03 14:49:59,810 - chatbot_agents.chatbot_agent - DEBUG - Initialized FAQ retrieval service
+2025-03-03 14:49:59,810 - services.memory - INFO - Initializing conversation memory service
+2025-03-03 14:49:59,810 - services.memory - DEBUG - Conversation memory service initialized
+2025-03-03 14:49:59,810 - chatbot_agents.chatbot_agent - DEBUG - Initialized conversation memory service
+2025-03-03 14:49:59,810 - services.order_tracking - INFO - Initializing order tracking service
+2025-03-03 14:49:59,810 - services.order_tracking - DEBUG - Loading existing order data from C:\Users\imadh\PycharmProjects\customer__agent\data\orders.json
+2025-03-03 14:49:59,810 - services.order_tracking - INFO - Loaded 20 orders
+2025-03-03 14:49:59,810 - services.order_tracking - DEBUG - Order tracking service initialized
+2025-03-03 14:49:59,810 - chatbot_agents.chatbot_agent - DEBUG - Initialized order tracking service
+2025-03-03 14:49:59,810 - chatbot_agents.chatbot_agent - INFO - Chatbot agent initialized successfully
+2025-03-03 14:49:59,821 - __main__ - INFO - Starting Customer Service Chatbot API on 0.0.0.0:8000
+2025-03-03 14:49:59,834 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-03-03 14:50:06,398 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:50:12,180 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:50:14,252 - __main__ - DEBUG - Received chat request: hi (Session ID: c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4)
+2025-03-03 14:50:14,253 - chatbot_agents.chatbot_agent - DEBUG - Processing message for session c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4: hi
+2025-03-03 14:50:14,254 - services.memory - DEBUG - No context found for session c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4
+2025-03-03 14:50:14,254 - services.memory - DEBUG - Creating new conversation history for session c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4
+2025-03-03 14:50:14,255 - services.memory - DEBUG - Added user message to session c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4
+2025-03-03 14:50:14,259 - chatbot_agents.chatbot_agent - DEBUG - No order ID found in message
+2025-03-03 14:50:14,259 - services.faq_retrieval - DEBUG - Retrieving FAQs for query: hi
+2025-03-03 14:50:14,311 - services.faq_retrieval - DEBUG - Retrieved 1 relevant FAQs
+2025-03-03 14:50:14,312 - services.faq_retrieval - DEBUG - Query does not closely match any FAQ
+2025-03-03 14:50:14,312 - chatbot_agents.chatbot_agent - DEBUG - Using language model for response
+2025-03-03 14:50:14,312 - chatbot_agents.chatbot_agent - DEBUG - Generating model response
+2025-03-03 14:50:14,313 - services.memory - DEBUG - Retrieved 1 messages for session c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4
+2025-03-03 14:50:14,313 - models.deepseek_model - DEBUG - Generating response for prompt: hi...
+2025-03-03 14:50:37,063 - models.deepseek_model - DEBUG - Generated response: Okay, so I just received this message: "hihi". Hmm...
+2025-03-03 14:50:37,063 - chatbot_agents.chatbot_agent - DEBUG - Model generated response: Okay, so I just received this message: "hihi". Hmm...
+2025-03-03 14:50:37,063 - services.memory - DEBUG - Added assistant message to session c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4
+2025-03-03 14:50:37,063 - services.memory - DEBUG - No context found for session c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4
+2025-03-03 14:50:37,063 - chatbot_agents.chatbot_agent - DEBUG - Generated response for session c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4: Okay, so I just received this message: "hihi". Hmm...
+2025-03-03 14:50:37,068 - __main__ - DEBUG - Generated response: Okay, so I just received this message: "hihi". Hmm, I need to figure out what to do with this. It seems like a friendly greeting, but it's just two words, so it's not very informative. I should respond in a similar way but provide some value. Maybe acknowledge the greeting and let the conversation continue. I want to make sure the response is friendly and helpful without any internal thoughts or reasoning.
+
+Wait, the user mentioned it's for an e-commerce store. Maybe they're a customer service representative. So, I should keep the tone positive and approachable. I can start by thanking them for reaching out and then perhaps ask them how I can assist them today. That way, I'm being helpful without any internal dialogue.
+
+Let me think about the structure. I should keep it concise, as the user requested. Maybe a short, friendly response that starts with "Hi" and then asks how I can help. That should cover it without being too lengthy or too formal.
+
+I also need to make sure the response is professional but not pushy. It should be a natural conversation flow. So, "Hi! How can I assist you today?" seems appropriate. That way, it's friendly and opens the door for further conversation.
+
+I should avoid any technical jargon or explanations. Just a simple, clear response. Also, keeping it to a minimum, since the user wants it concise. So, maybe just a short line of "Hi! How can I assist you today?" would work.
+
+I wonder if the user has any specific questions or issues they want to address. Maybe they forgot to include some details in their message. But since they just sent "hihi", it's hard to tell. I should assume they're open to any assistance they need.
+
+Alright, putting it all together: start with a friendly greeting, then ask how I can help. Keep it short and professional. That should satisfy the user's request and help them get their question answered.
+</think>
+
+Hi! How can I assist you today? (Session ID: c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4)
+2025-03-03 14:50:39,156 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:51:13,514 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:51:15,565 - __main__ - DEBUG - Received chat request: i am imad what s ur name (Session ID: c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4)
+2025-03-03 14:51:15,566 - chatbot_agents.chatbot_agent - DEBUG - Processing message for session c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4: i am imad what s ur name
+2025-03-03 14:51:15,567 - services.memory - DEBUG - No context found for session c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4
+2025-03-03 14:51:15,568 - services.memory - DEBUG - Added user message to session c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4
+2025-03-03 14:51:15,568 - chatbot_agents.chatbot_agent - DEBUG - No order ID found in message
+2025-03-03 14:51:15,569 - services.faq_retrieval - DEBUG - Retrieving FAQs for query: i am imad what s ur name
+2025-03-03 14:51:15,594 - services.faq_retrieval - DEBUG - Retrieved 1 relevant FAQs
+2025-03-03 14:51:15,595 - services.faq_retrieval - DEBUG - Query does not closely match any FAQ
+2025-03-03 14:51:15,596 - chatbot_agents.chatbot_agent - DEBUG - Using language model for response
+2025-03-03 14:51:15,596 - chatbot_agents.chatbot_agent - DEBUG - Generating model response
+2025-03-03 14:51:15,597 - services.memory - DEBUG - Retrieved 3 messages for session c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4
+2025-03-03 14:51:15,597 - models.deepseek_model - DEBUG - Generating response for prompt: i am imad what s ur name...
+2025-03-03 14:51:28,770 - models.deepseek_model - DEBUG - Generated response: Alright, let's figure out how to help this user. H...
+2025-03-03 14:51:28,770 - chatbot_agents.chatbot_agent - DEBUG - Model generated response: Alright, let's figure out how to help this user. H...
+2025-03-03 14:51:28,770 - services.memory - DEBUG - Added assistant message to session c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4
+2025-03-03 14:51:28,770 - services.memory - DEBUG - No context found for session c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4
+2025-03-03 14:51:28,770 - chatbot_agents.chatbot_agent - DEBUG - Generated response for session c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4: Alright, let's figure out how to help this user. H...
+2025-03-03 14:51:28,770 - __main__ - DEBUG - Generated response: Alright, let's figure out how to help this user. He's called "Imad" and he's asking for his name. Hmm, that's a bit confusing because he's using a different name. Maybe he's a native speaker or something? Or perhaps he's trying to find out who I am.
+
+Looking back at the conversation history, I had previously responded by saying "Hi! How can I assist you today?" So, he's clearly a new user who just needs help. But he's using a name that doesn't seem to match mine, which might be causing some confusion.
+
+I should acknowledge his name and let him know I'm here to help with whatever he needs. Maybe he's just trying to get me to explain something or understand a term he heard. Since I don't have any internal details, I can't assume how he's using the name.
+
+I want to keep the response friendly and open, so I'll offer help in a general sense. That way, he knows I'm ready to assist him with whatever he needs. It's important to be approachable and not pushy, just letting him know I'm here for your inquiries.
+</think>
+
+Hi! I'm here to help with whatever you need. How can I assist you today? (Session ID: c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4)
+2025-03-03 14:51:30,825 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:52:33,071 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:52:35,122 - __main__ - DEBUG - Received chat request: this chatbot is for what , ur company is doing what (Session ID: c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4)
+2025-03-03 14:52:35,123 - chatbot_agents.chatbot_agent - DEBUG - Processing message for session c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4: this chatbot is for what , ur company is doing what
+2025-03-03 14:52:35,124 - services.memory - DEBUG - No context found for session c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4
+2025-03-03 14:52:35,125 - services.memory - DEBUG - Added user message to session c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4
+2025-03-03 14:52:35,125 - chatbot_agents.chatbot_agent - DEBUG - No order ID found in message
+2025-03-03 14:52:35,126 - services.faq_retrieval - DEBUG - Retrieving FAQs for query: this chatbot is for what , ur company is doing what
+2025-03-03 14:52:35,155 - services.faq_retrieval - DEBUG - Retrieved 1 relevant FAQs
+2025-03-03 14:52:35,156 - services.faq_retrieval - DEBUG - Query does not closely match any FAQ
+2025-03-03 14:52:35,156 - chatbot_agents.chatbot_agent - DEBUG - Using language model for response
+2025-03-03 14:52:35,157 - chatbot_agents.chatbot_agent - DEBUG - Generating model response
+2025-03-03 14:52:35,158 - services.memory - DEBUG - Retrieved 5 messages for session c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4
+2025-03-03 14:52:35,158 - models.deepseek_model - DEBUG - Generating response for prompt: this chatbot is for what , ur company is doing wha...
+2025-03-03 14:52:54,229 - models.deepseek_model - DEBUG - Generated response: Okay, so I need to figure out what this chatbot is...
+2025-03-03 14:52:54,234 - chatbot_agents.chatbot_agent - DEBUG - Model generated response: Okay, so I need to figure out what this chatbot is...
+2025-03-03 14:52:54,234 - services.memory - DEBUG - Added assistant message to session c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4
+2025-03-03 14:52:54,234 - services.memory - DEBUG - No context found for session c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4
+2025-03-03 14:52:54,235 - chatbot_agents.chatbot_agent - DEBUG - Generated response for session c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4: Okay, so I need to figure out what this chatbot is...
+2025-03-03 14:52:54,235 - __main__ - DEBUG - Generated response: Okay, so I need to figure out what this chatbot is for and what the user company is doing. The user mentioned "this chatbot is for what , ur company is doing what." Hmm, that seems a bit vague. I'm not entirely sure what the chatbot is designed for. Maybe it's a tool that helps businesses or companies with some specific tasks? 
+
+Let me think about different chatbots I've heard of. There's the Amazon Best Box Office Chatbot, which is used to answer customer service questions. Then there's the Microsoft Exchange Chatbot, which is used for technical support. But these are examples, and the user didn't specify which one they're referring to.
+
+I wonder if the chatbot's purpose depends on the company's needs. For example, a retail store might use a chatbot for customer service, while a tech company might use it for technical support. Maybe the user is asking about a specific type of chatbot used in their industry.
+
+I should consider other possibilities. There's also something called the "Chatbot for Business" by Stripe, which is designed for businesses to interact with customers. But again, without knowing the specific company, it's hard to pinpoint the exact purpose.
+
+Another angle could be about the functionality of the chatbot. It might be designed to help with answering questions, providing information, or even automating certain tasks. The user might be looking for guidance on how to use the chatbot effectively.
+
+I'm also thinking about how the chatbot can be integrated with other tools or platforms. Maybe it's part of a larger system that helps businesses streamline their operations. But without more details, it's challenging to determine the exact application.
+
+Perhaps the chatbot is meant to gather customer feedback or provide insights into their business performance. It could help in understanding customer needs better, which in turn allows for more tailored (Session ID: c53d4c23-52c0-4b6f-aa9d-a3e29f96d5a4)
+2025-03-03 14:52:56,284 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:56:17,302 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:56:17,426 - __main__ - DEBUG - Tracking order: ORD-100001
+2025-03-03 14:56:17,427 - chatbot_agents.chatbot_agent - DEBUG - Tracking order: ORD-100001
+2025-03-03 14:56:17,427 - services.order_tracking - DEBUG - Retrieving order: ORD-100001
+2025-03-03 14:56:17,428 - services.order_tracking - DEBUG - Found order: ORD-100001
+2025-03-03 14:56:17,429 - chatbot_agents.chatbot_agent - DEBUG - Found order ORD-100001 with status Delivered
+2025-03-03 14:56:19,472 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:56:31,696 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:56:31,808 - __main__ - DEBUG - Tracking order: ORD-100002
+2025-03-03 14:56:31,809 - chatbot_agents.chatbot_agent - DEBUG - Tracking order: ORD-100002
+2025-03-03 14:56:31,809 - services.order_tracking - DEBUG - Retrieving order: ORD-100002
+2025-03-03 14:56:31,810 - services.order_tracking - DEBUG - Found order: ORD-100002
+2025-03-03 14:56:31,811 - chatbot_agents.chatbot_agent - DEBUG - Found order ORD-100002 with status Delivered
+2025-03-03 14:56:33,854 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:56:38,333 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:56:38,411 - __main__ - DEBUG - Tracking order: ORD-10045
+2025-03-03 14:56:38,412 - chatbot_agents.chatbot_agent - DEBUG - Tracking order: ORD-10045
+2025-03-03 14:56:38,413 - services.order_tracking - DEBUG - Retrieving order: ORD-10045
+2025-03-03 14:56:38,413 - services.order_tracking - DEBUG - Order not found: ORD-10045
+2025-03-03 14:56:38,414 - chatbot_agents.chatbot_agent - DEBUG - Order not found: ORD-10045
+2025-03-03 14:56:40,468 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:57:08,774 - chatbot_agents.chatbot_agent - INFO - Initializing chatbot agent
+2025-03-03 14:57:08,774 - models.deepseek_model - INFO - Initializing DeepSeek model: deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
+2025-03-03 14:57:08,779 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-03 14:57:09,334 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-03 14:57:09,779 - models.deepseek_model - DEBUG - Tokenizer loaded successfully
+2025-03-03 14:57:10,474 - models.deepseek_model - DEBUG - Using device: cuda
+2025-03-03 14:57:10,613 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-03 14:57:15,312 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2025-03-03 14:57:15,747 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2025-03-03 14:57:15,747 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2025-03-03 14:57:15,748 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2025-03-03 14:57:15,748 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2025-03-03 14:57:22,772 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B/resolve/main/generation_config.json HTTP/1.1" 200 0
+2025-03-03 14:57:22,798 - models.deepseek_model - INFO - Model loaded successfully on cuda
+2025-03-03 14:57:22,799 - chatbot_agents.chatbot_agent - DEBUG - Initialized DeepSeek model
+2025-03-03 14:57:22,799 - services.faq_retrieval - INFO - Initializing FAQ retrieval service
+2025-03-03 14:57:27,705 - tensorflow - WARNING - From C:\Users\imadh\anaconda3\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-03 14:57:28,308 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2025-03-03 14:57:28,308 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-03 14:57:28,442 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-03 14:57:28,603 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-03 14:57:28,740 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-03 14:57:28,880 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-03 14:57:29,017 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-03 14:57:29,161 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-03 14:57:29,737 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-03 14:57:29,930 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6758
+2025-03-03 14:57:30,080 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6758
+2025-03-03 14:57:30,145 - services.faq_retrieval - DEBUG - Loaded embedding model: sentence-transformers/all-MiniLM-L6-v2
+2025-03-03 14:57:30,145 - services.faq_retrieval - DEBUG - Loading existing FAQ data from C:\Users\imadh\PycharmProjects\customer__agent\data\faqs.json
+2025-03-03 14:57:30,153 - services.faq_retrieval - INFO - Loaded 45 FAQs
+2025-03-03 14:57:30,153 - services.faq_retrieval - DEBUG - Initializing FAISS vector store
+2025-03-03 14:57:30,369 - faiss.loader - DEBUG - Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2025-03-03 14:57:30,369 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2025-03-03 14:57:30,369 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-03-03 14:57:30,369 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-03-03 14:57:30,409 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-03-03 14:57:30,419 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes.
+2025-03-03 14:57:30,426 - services.faq_retrieval - INFO - Initialized vector store with 45 FAQ documents
+2025-03-03 14:57:30,426 - chatbot_agents.chatbot_agent - DEBUG - Initialized FAQ retrieval service
+2025-03-03 14:57:30,426 - services.memory - INFO - Initializing conversation memory service
+2025-03-03 14:57:30,426 - services.memory - DEBUG - Conversation memory service initialized
+2025-03-03 14:57:30,426 - chatbot_agents.chatbot_agent - DEBUG - Initialized conversation memory service
+2025-03-03 14:57:30,426 - services.order_tracking - INFO - Initializing order tracking service
+2025-03-03 14:57:30,426 - services.order_tracking - DEBUG - Loading existing order data from C:\Users\imadh\PycharmProjects\customer__agent\data\orders.json
+2025-03-03 14:57:30,429 - services.order_tracking - INFO - Loaded 20 orders
+2025-03-03 14:57:30,429 - services.order_tracking - DEBUG - Order tracking service initialized
+2025-03-03 14:57:30,429 - chatbot_agents.chatbot_agent - DEBUG - Initialized order tracking service
+2025-03-03 14:57:30,429 - chatbot_agents.chatbot_agent - INFO - Chatbot agent initialized successfully
+2025-03-03 14:57:30,440 - __main__ - INFO - Starting Customer Service Chatbot API on 0.0.0.0:8000
+2025-03-03 14:57:30,448 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-03-03 14:58:38,649 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 14:58:51,656 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 15:00:33,587 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 15:00:39,345 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 15:00:41,447 - __main__ - DEBUG - Received chat request: hi (Session ID: ec34fb72-e710-45e7-bfff-4ee7b00f75ab)
+2025-03-03 15:00:41,449 - chatbot_agents.chatbot_agent - DEBUG - Processing message for session ec34fb72-e710-45e7-bfff-4ee7b00f75ab: hi
+2025-03-03 15:00:41,449 - services.memory - DEBUG - No context found for session ec34fb72-e710-45e7-bfff-4ee7b00f75ab
+2025-03-03 15:00:41,450 - services.memory - DEBUG - Creating new conversation history for session ec34fb72-e710-45e7-bfff-4ee7b00f75ab
+2025-03-03 15:00:41,451 - services.memory - DEBUG - Added user message to session ec34fb72-e710-45e7-bfff-4ee7b00f75ab
+2025-03-03 15:00:41,455 - chatbot_agents.chatbot_agent - DEBUG - No order ID found in message
+2025-03-03 15:00:41,456 - services.faq_retrieval - DEBUG - Retrieving FAQs for query: hi
+2025-03-03 15:00:41,506 - services.faq_retrieval - DEBUG - Retrieved 1 relevant FAQs
+2025-03-03 15:00:41,507 - services.faq_retrieval - DEBUG - Query does not closely match any FAQ
+2025-03-03 15:00:41,507 - chatbot_agents.chatbot_agent - DEBUG - Using language model for response
+2025-03-03 15:00:41,508 - chatbot_agents.chatbot_agent - DEBUG - Generating model response
+2025-03-03 15:00:41,508 - services.memory - DEBUG - Retrieved 1 messages for session ec34fb72-e710-45e7-bfff-4ee7b00f75ab
+2025-03-03 15:00:41,509 - models.deepseek_model - DEBUG - Generating response for prompt: hi...
+2025-03-03 15:00:48,260 - models.deepseek_model - DEBUG - Generated response: Okay, so the user just said "hi". That's a friendl...
+2025-03-03 15:00:48,260 - chatbot_agents.chatbot_agent - DEBUG - Model generated response: Okay, so the user just said "hi". That's a friendl...
+2025-03-03 15:00:48,260 - services.memory - DEBUG - Added assistant message to session ec34fb72-e710-45e7-bfff-4ee7b00f75ab
+2025-03-03 15:00:48,260 - services.memory - DEBUG - No context found for session ec34fb72-e710-45e7-bfff-4ee7b00f75ab
+2025-03-03 15:00:48,262 - chatbot_agents.chatbot_agent - DEBUG - Generated response for session ec34fb72-e710-45e7-bfff-4ee7b00f75ab: Okay, so the user just said "hi". That's a friendl...
+2025-03-03 15:00:48,262 - __main__ - DEBUG - Generated response: Okay, so the user just said "hi". That's a friendly greeting. I should respond in a warm and welcoming manner. I want to make sure they feel comfortable asking for help. Maybe I can start with a thank you and then offer assistance. I'll keep it simple and direct. Let me think, "Hi! How can I assist you today?" sounds good. It's friendly and shows I'm ready to help.
+</think>
+
+Hi! How can I assist you today? (Session ID: ec34fb72-e710-45e7-bfff-4ee7b00f75ab)
+2025-03-03 15:00:49,143 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 15:00:49,349 - __main__ - DEBUG - Tracking order: ORD-100001
+2025-03-03 15:00:49,350 - chatbot_agents.chatbot_agent - DEBUG - Tracking order: ORD-100001
+2025-03-03 15:00:49,351 - services.order_tracking - DEBUG - Retrieving order: ORD-100001
+2025-03-03 15:00:49,352 - services.order_tracking - DEBUG - Found order: ORD-100001
+2025-03-03 15:00:49,352 - chatbot_agents.chatbot_agent - DEBUG - Found order ORD-100001 with status Delivered
+2025-03-03 15:00:51,399 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 15:01:07,107 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 15:01:12,150 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 15:01:16,736 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 15:01:18,824 - __main__ - DEBUG - Received chat request: hi (Session ID: 5fd74acd-d747-4494-b326-d4637a9f4612)
+2025-03-03 15:01:18,825 - chatbot_agents.chatbot_agent - DEBUG - Processing message for session 5fd74acd-d747-4494-b326-d4637a9f4612: hi
+2025-03-03 15:01:18,826 - services.memory - DEBUG - No context found for session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:01:18,826 - services.memory - DEBUG - Creating new conversation history for session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:01:18,829 - services.memory - DEBUG - Added user message to session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:01:18,831 - chatbot_agents.chatbot_agent - DEBUG - No order ID found in message
+2025-03-03 15:01:18,831 - services.faq_retrieval - DEBUG - Retrieving FAQs for query: hi
+2025-03-03 15:01:18,864 - services.faq_retrieval - DEBUG - Retrieved 1 relevant FAQs
+2025-03-03 15:01:18,871 - services.faq_retrieval - DEBUG - Query does not closely match any FAQ
+2025-03-03 15:01:18,878 - chatbot_agents.chatbot_agent - DEBUG - Using language model for response
+2025-03-03 15:01:18,880 - chatbot_agents.chatbot_agent - DEBUG - Generating model response
+2025-03-03 15:01:18,880 - services.memory - DEBUG - Retrieved 1 messages for session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:01:18,880 - models.deepseek_model - DEBUG - Generating response for prompt: hi...
+2025-03-03 15:01:25,494 - models.deepseek_model - DEBUG - Generated response: Alright, so the user just said "hi". That's pretty...
+2025-03-03 15:01:25,494 - chatbot_agents.chatbot_agent - DEBUG - Model generated response: Alright, so the user just said "hi". That's pretty...
+2025-03-03 15:01:25,495 - services.memory - DEBUG - Added assistant message to session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:01:25,495 - services.memory - DEBUG - No context found for session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:01:25,495 - chatbot_agents.chatbot_agent - DEBUG - Generated response for session 5fd74acd-d747-4494-b326-d4637a9f4612: Alright, so the user just said "hi". That's pretty...
+2025-03-03 15:01:27,620 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 15:01:49,643 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 15:01:51,752 - __main__ - DEBUG - Received chat request: can u  help me track my order (Session ID: 5fd74acd-d747-4494-b326-d4637a9f4612)
+2025-03-03 15:01:51,753 - chatbot_agents.chatbot_agent - DEBUG - Processing message for session 5fd74acd-d747-4494-b326-d4637a9f4612: can u  help me track my order
+2025-03-03 15:01:51,754 - services.memory - DEBUG - No context found for session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:01:51,755 - services.memory - DEBUG - Added user message to session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:01:51,756 - chatbot_agents.chatbot_agent - DEBUG - No order ID found in message
+2025-03-03 15:01:51,757 - services.faq_retrieval - DEBUG - Retrieving FAQs for query: can u  help me track my order
+2025-03-03 15:01:51,779 - services.faq_retrieval - DEBUG - Retrieved 1 relevant FAQs
+2025-03-03 15:01:51,780 - services.faq_retrieval - DEBUG - Query matches FAQ with similarity 0.7661500042298224
+2025-03-03 15:01:51,781 - chatbot_agents.chatbot_agent - DEBUG - Detected FAQ question
+2025-03-03 15:01:51,782 - chatbot_agents.chatbot_agent - DEBUG - Handling FAQ question
+2025-03-03 15:01:51,783 - services.faq_retrieval - DEBUG - Retrieving FAQs for query: can u  help me track my order
+2025-03-03 15:01:51,798 - services.faq_retrieval - DEBUG - Retrieved 1 relevant FAQs
+2025-03-03 15:01:51,799 - services.faq_retrieval - DEBUG - Query matches FAQ with similarity 0.7661500042298224
+2025-03-03 15:01:51,799 - chatbot_agents.chatbot_agent - DEBUG - Found matching FAQ: How do I track my order?
+2025-03-03 15:01:51,800 - services.memory - DEBUG - Added assistant message to session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:01:51,800 - services.memory - DEBUG - No context found for session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:01:51,801 - chatbot_agents.chatbot_agent - DEBUG - Generated response for session 5fd74acd-d747-4494-b326-d4637a9f4612: You can track your order by entering your order ID...
+2025-03-03 15:01:51,801 - __main__ - DEBUG - Generated response: You can track your order by entering your order ID in the order tracking section on our website or by contacting our customer support. (Session ID: 5fd74acd-d747-4494-b326-d4637a9f4612)
+2025-03-03 15:01:53,883 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 15:02:36,212 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 15:02:38,299 - __main__ - DEBUG - Received chat request: plz What is your return policy? (Session ID: 5fd74acd-d747-4494-b326-d4637a9f4612)
+2025-03-03 15:02:38,300 - chatbot_agents.chatbot_agent - DEBUG - Processing message for session 5fd74acd-d747-4494-b326-d4637a9f4612: plz What is your return policy?
+2025-03-03 15:02:38,300 - services.memory - DEBUG - No context found for session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:02:38,302 - services.memory - DEBUG - Added user message to session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:02:38,303 - chatbot_agents.chatbot_agent - DEBUG - No order ID found in message
+2025-03-03 15:02:38,303 - services.faq_retrieval - DEBUG - Retrieving FAQs for query: plz What is your return policy?
+2025-03-03 15:02:38,330 - services.faq_retrieval - DEBUG - Retrieved 1 relevant FAQs
+2025-03-03 15:02:38,331 - services.faq_retrieval - DEBUG - Query matches FAQ with similarity 0.9078427367093737
+2025-03-03 15:02:38,331 - chatbot_agents.chatbot_agent - DEBUG - Detected FAQ question
+2025-03-03 15:02:38,331 - chatbot_agents.chatbot_agent - DEBUG - Handling FAQ question
+2025-03-03 15:02:38,332 - services.faq_retrieval - DEBUG - Retrieving FAQs for query: plz What is your return policy?
+2025-03-03 15:02:38,346 - services.faq_retrieval - DEBUG - Retrieved 1 relevant FAQs
+2025-03-03 15:02:38,347 - services.faq_retrieval - DEBUG - Query matches FAQ with similarity 0.9078427367093737
+2025-03-03 15:02:38,347 - chatbot_agents.chatbot_agent - DEBUG - Found matching FAQ: What is your return policy?
+2025-03-03 15:02:38,348 - services.memory - DEBUG - Added assistant message to session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:02:38,349 - services.memory - DEBUG - No context found for session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:02:38,349 - chatbot_agents.chatbot_agent - DEBUG - Generated response for session 5fd74acd-d747-4494-b326-d4637a9f4612: We accept returns within 30 days of purchase. Item...
+2025-03-03 15:02:38,349 - __main__ - DEBUG - Generated response: We accept returns within 30 days of purchase. Items must be in their original condition with tags attached. Please visit our Returns page for more details. (Session ID: 5fd74acd-d747-4494-b326-d4637a9f4612)
+2025-03-03 15:02:40,419 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 15:02:45,654 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 15:02:58,399 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 15:03:00,496 - __main__ - DEBUG - Received chat request: do u support visa for payement? (Session ID: 5fd74acd-d747-4494-b326-d4637a9f4612)
+2025-03-03 15:03:00,497 - chatbot_agents.chatbot_agent - DEBUG - Processing message for session 5fd74acd-d747-4494-b326-d4637a9f4612: do u support visa for payement?
+2025-03-03 15:03:00,498 - services.memory - DEBUG - No context found for session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:03:00,498 - services.memory - DEBUG - Added user message to session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:03:00,499 - chatbot_agents.chatbot_agent - DEBUG - No order ID found in message
+2025-03-03 15:03:00,499 - services.faq_retrieval - DEBUG - Retrieving FAQs for query: do u support visa for payement?
+2025-03-03 15:03:00,523 - services.faq_retrieval - DEBUG - Retrieved 1 relevant FAQs
+2025-03-03 15:03:00,524 - services.faq_retrieval - DEBUG - Query does not closely match any FAQ
+2025-03-03 15:03:00,524 - chatbot_agents.chatbot_agent - DEBUG - Using language model for response
+2025-03-03 15:03:00,525 - chatbot_agents.chatbot_agent - DEBUG - Generating model response
+2025-03-03 15:03:00,526 - services.memory - DEBUG - Retrieved 5 messages for session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:03:00,527 - models.deepseek_model - DEBUG - Generating response for prompt: do u support visa for payement?...
+2025-03-03 15:03:09,793 - models.deepseek_model - DEBUG - Generated response: Alright, let me try to figure out how to approach ...
+2025-03-03 15:03:09,793 - chatbot_agents.chatbot_agent - DEBUG - Model generated response: Alright, let me try to figure out how to approach ...
+2025-03-03 15:03:09,794 - services.memory - DEBUG - Added assistant message to session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:03:09,794 - services.memory - DEBUG - No context found for session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:03:09,795 - chatbot_agents.chatbot_agent - DEBUG - Generated response for session 5fd74acd-d747-4494-b326-d4637a9f4612: Alright, let me try to figure out how to approach ...
+2025-03-03 15:03:09,795 - __main__ - DEBUG - Generated response: Alright, let me try to figure out how to approach this. The user is asking if they can use a visa for payments. They've already received some previous responses from me, so I need to make sure I address this accurately.
+
+Looking back, in the history, I provided a general return policy without mentioning specific visa types. Now, the user is asking specifically about visa support, so I should clarify that all major credit cards accept payments. It's also important to mention that some cards have additional fees and may need to apply for a visa separately, especially for international purchases.
+
+I should keep the response straightforward and informative, without any extra fluff. Making sure to highlight that Visa is widely accepted is key here. I need to present this clearly so the user knows without any confusion.
+</think>
+
+Yes, most major credit cards accept payments, including Visa. However, for international purchases, you may need to apply for a visa separately. (Session ID: 5fd74acd-d747-4494-b326-d4637a9f4612)
+2025-03-03 15:03:11,849 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 15:03:25,002 - __main__ - DEBUG - Tracking order: ORD-100001
+2025-03-03 15:03:25,003 - chatbot_agents.chatbot_agent - DEBUG - Tracking order: ORD-100001
+2025-03-03 15:03:25,004 - services.order_tracking - DEBUG - Retrieving order: ORD-100001
+2025-03-03 15:03:25,005 - services.order_tracking - DEBUG - Found order: ORD-100001
+2025-03-03 15:03:25,005 - chatbot_agents.chatbot_agent - DEBUG - Found order ORD-100001 with status Delivered
+2025-03-03 15:03:27,071 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 15:04:22,931 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-03 15:04:25,042 - __main__ - DEBUG - Received chat request: what is ur hq? (Session ID: 5fd74acd-d747-4494-b326-d4637a9f4612)
+2025-03-03 15:04:25,043 - chatbot_agents.chatbot_agent - DEBUG - Processing message for session 5fd74acd-d747-4494-b326-d4637a9f4612: what is ur hq?
+2025-03-03 15:04:25,044 - services.memory - DEBUG - No context found for session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:04:25,045 - services.memory - DEBUG - Added user message to session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:04:25,046 - chatbot_agents.chatbot_agent - DEBUG - No order ID found in message
+2025-03-03 15:04:25,046 - services.faq_retrieval - DEBUG - Retrieving FAQs for query: what is ur hq?
+2025-03-03 15:04:25,076 - services.faq_retrieval - DEBUG - Retrieved 1 relevant FAQs
+2025-03-03 15:04:25,077 - services.faq_retrieval - DEBUG - Query does not closely match any FAQ
+2025-03-03 15:04:25,077 - chatbot_agents.chatbot_agent - DEBUG - Using language model for response
+2025-03-03 15:04:25,077 - chatbot_agents.chatbot_agent - DEBUG - Generating model response
+2025-03-03 15:04:25,078 - services.memory - DEBUG - Retrieved 5 messages for session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:04:25,078 - models.deepseek_model - DEBUG - Generating response for prompt: what is ur hq?...
+2025-03-03 15:04:34,888 - models.deepseek_model - DEBUG - Generated response: Okay, so the user is asking, "what is ur hq?" They...
+2025-03-03 15:04:34,889 - chatbot_agents.chatbot_agent - DEBUG - Model generated response: Okay, so the user is asking, "what is ur hq?" They...
+2025-03-03 15:04:34,889 - services.memory - DEBUG - Added assistant message to session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:04:34,889 - services.memory - DEBUG - No context found for session 5fd74acd-d747-4494-b326-d4637a9f4612
+2025-03-03 15:04:34,889 - chatbot_agents.chatbot_agent - DEBUG - Generated response for session 5fd74acd-d747-4494-b326-d4637a9f4612: Okay, so the user is asking, "what is ur hq?" They...
+2025-03-03 15:04:34,889 - __main__ - DEBUG - Generated response: Okay, so the user is asking, "what is ur hq?" They must be referring to the user's location, maybe in a business setting. Since the previous conversation was about the return policy, I can see they're looking for more information about the company.
+
+I should figure out what "ur hq" stands for. It could be a typo, maybe "u" in place of "our." In business contexts, that's common. So, I'll assume they meant "where are we?" or "what's your HQ?"
+
+I need to provide a concise and professional answer. The user wants accurate information, so I'll mention that the company's headquarters is in [insert location], and I'll include the country and region to give context.
+
+I should keep it friendly and helpful, without any internal thoughts. I'll make sure to highlight the key points clearly and provide the necessary details without being too lengthy.
+</think>
+
+The company's headquarters is located in [insert location], [insert country/region]. (Session ID: 5fd74acd-d747-4494-b326-d4637a9f4612)
+2025-03-03 15:04:36,948 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-04 10:58:51,331 - chatbot_agents.chatbot_agent - INFO - Initializing chatbot agent
+2025-03-04 10:58:51,331 - models.deepseek_model - INFO - Initializing DeepSeek model: deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
+2025-03-04 10:58:51,336 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-04 10:58:51,960 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-04 10:58:52,699 - models.deepseek_model - DEBUG - Tokenizer loaded successfully
+2025-03-04 10:58:54,094 - models.deepseek_model - DEBUG - Using device: cuda
+2025-03-04 10:58:54,299 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-04 10:59:01,149 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2025-03-04 10:59:01,867 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2025-03-04 10:59:01,867 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2025-03-04 10:59:01,867 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2025-03-04 10:59:01,867 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2025-03-04 10:59:16,429 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B/resolve/main/generation_config.json HTTP/1.1" 200 0
+2025-03-04 10:59:16,470 - models.deepseek_model - INFO - Model loaded successfully on cuda
+2025-03-04 10:59:16,470 - chatbot_agents.chatbot_agent - DEBUG - Initialized DeepSeek model
+2025-03-04 10:59:16,470 - services.faq_retrieval - INFO - Initializing FAQ retrieval service
+2025-03-04 10:59:25,465 - tensorflow - WARNING - From C:\Users\imadh\anaconda3\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-04 10:59:26,814 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2025-03-04 10:59:26,814 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-04 10:59:26,972 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-04 10:59:27,180 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-04 10:59:27,371 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-04 10:59:27,578 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-04 10:59:27,783 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-04 10:59:27,990 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-04 10:59:28,835 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-04 10:59:29,123 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6758
+2025-03-04 10:59:29,329 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6758
+2025-03-04 10:59:29,599 - services.faq_retrieval - DEBUG - Loaded embedding model: sentence-transformers/all-MiniLM-L6-v2
+2025-03-04 10:59:29,615 - services.faq_retrieval - DEBUG - Loading existing FAQ data from C:\Users\imadh\PycharmProjects\customer__agent\data\faqs.json
+2025-03-04 10:59:29,615 - services.faq_retrieval - INFO - Loaded 45 FAQs
+2025-03-04 10:59:29,615 - services.faq_retrieval - DEBUG - Initializing FAISS vector store
+2025-03-04 10:59:30,565 - faiss.loader - DEBUG - Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2025-03-04 10:59:30,565 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2025-03-04 10:59:30,565 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-03-04 10:59:30,565 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-03-04 10:59:30,708 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-03-04 10:59:30,724 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes.
+2025-03-04 10:59:30,725 - services.faq_retrieval - INFO - Initialized vector store with 45 FAQ documents
+2025-03-04 10:59:30,725 - chatbot_agents.chatbot_agent - DEBUG - Initialized FAQ retrieval service
+2025-03-04 10:59:30,725 - services.memory - INFO - Initializing conversation memory service
+2025-03-04 10:59:30,725 - services.memory - DEBUG - Conversation memory service initialized
+2025-03-04 10:59:30,725 - chatbot_agents.chatbot_agent - DEBUG - Initialized conversation memory service
+2025-03-04 10:59:30,725 - services.order_tracking - INFO - Initializing order tracking service
+2025-03-04 10:59:30,725 - services.order_tracking - DEBUG - Loading existing order data from C:\Users\imadh\PycharmProjects\customer__agent\data\orders.json
+2025-03-04 10:59:30,725 - services.order_tracking - INFO - Loaded 20 orders
+2025-03-04 10:59:30,737 - services.order_tracking - DEBUG - Order tracking service initialized
+2025-03-04 10:59:30,737 - chatbot_agents.chatbot_agent - DEBUG - Initialized order tracking service
+2025-03-04 10:59:30,737 - chatbot_agents.chatbot_agent - INFO - Chatbot agent initialized successfully
+2025-03-04 10:59:30,741 - __main__ - INFO - Starting Customer Service Chatbot API on 0.0.0.0:8000
+2025-03-04 10:59:30,759 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-03-04 10:59:41,879 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-04 11:00:07,017 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-04 11:00:09,096 - __main__ - DEBUG - Received chat request: hi (Session ID: 647abdd4-533a-410c-a2f4-cfe0217b0d9b)
+2025-03-04 11:00:09,103 - chatbot_agents.chatbot_agent - DEBUG - Processing message for session 647abdd4-533a-410c-a2f4-cfe0217b0d9b: hi
+2025-03-04 11:00:09,104 - services.memory - DEBUG - No context found for session 647abdd4-533a-410c-a2f4-cfe0217b0d9b
+2025-03-04 11:00:09,104 - services.memory - DEBUG - Creating new conversation history for session 647abdd4-533a-410c-a2f4-cfe0217b0d9b
+2025-03-04 11:00:09,104 - services.memory - DEBUG - Added user message to session 647abdd4-533a-410c-a2f4-cfe0217b0d9b
+2025-03-04 11:00:09,104 - chatbot_agents.chatbot_agent - DEBUG - No order ID found in message
+2025-03-04 11:00:09,104 - services.faq_retrieval - DEBUG - Retrieving FAQs for query: hi
+2025-03-04 11:00:09,219 - services.faq_retrieval - DEBUG - Retrieved 1 relevant FAQs
+2025-03-04 11:00:09,219 - services.faq_retrieval - DEBUG - Query does not closely match any FAQ
+2025-03-04 11:00:09,221 - chatbot_agents.chatbot_agent - DEBUG - Using language model for response
+2025-03-04 11:00:09,221 - chatbot_agents.chatbot_agent - DEBUG - Generating model response
+2025-03-04 11:00:09,221 - services.memory - DEBUG - Retrieved 1 messages for session 647abdd4-533a-410c-a2f4-cfe0217b0d9b
+2025-03-04 11:00:09,221 - models.deepseek_model - DEBUG - Generating response for prompt: hi...
+2025-03-04 11:00:17,908 - models.deepseek_model - DEBUG - Generated response: Okay, the user just sent "hi". I should respond in...
+2025-03-04 11:00:17,911 - chatbot_agents.chatbot_agent - DEBUG - Model generated response: Okay, the user just sent "hi". I should respond in...
+2025-03-04 11:00:17,911 - services.memory - DEBUG - Added assistant message to session 647abdd4-533a-410c-a2f4-cfe0217b0d9b
+2025-03-04 11:00:17,911 - services.memory - DEBUG - No context found for session 647abdd4-533a-410c-a2f4-cfe0217b0d9b
+2025-03-04 11:00:17,913 - chatbot_agents.chatbot_agent - DEBUG - Generated response for session 647abdd4-533a-410c-a2f4-cfe0217b0d9b: Okay, the user just sent "hi". I should respond in...
+2025-03-04 11:00:17,913 - __main__ - DEBUG - Generated response: Okay, the user just sent "hi". I should respond in a friendly and professional way. Since it's a simple greeting, I'll keep it concise. Maybe say "Hi there!" to be welcoming. Keep it straightforward without any internal thoughts or reasons.
+</think>
+
+Hi there! (Session ID: 647abdd4-533a-410c-a2f4-cfe0217b0d9b)
+2025-03-04 11:00:19,997 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-04 11:00:47,777 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-04 11:02:03,506 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-04 11:02:03,835 - __main__ - DEBUG - Tracking order: ORD-100001
+2025-03-04 11:02:03,835 - chatbot_agents.chatbot_agent - DEBUG - Tracking order: ORD-100001
+2025-03-04 11:02:03,835 - services.order_tracking - DEBUG - Retrieving order: ORD-100001
+2025-03-04 11:02:03,835 - services.order_tracking - DEBUG - Found order: ORD-100001
+2025-03-04 11:02:03,835 - chatbot_agents.chatbot_agent - DEBUG - Found order ORD-100001 with status Delivered
+2025-03-04 11:02:05,888 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-05 22:32:56,032 - chatbot_agents.chatbot_agent - INFO - Initializing chatbot agent
+2025-03-05 22:32:56,033 - models.deepseek_model - INFO - Initializing DeepSeek model: deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
+2025-03-05 22:32:56,038 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-05 22:32:56,576 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-05 22:32:57,097 - models.deepseek_model - DEBUG - Tokenizer loaded successfully
+2025-03-05 22:32:58,383 - models.deepseek_model - DEBUG - Using device: cuda
+2025-03-05 22:32:58,512 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-05 22:33:03,236 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2025-03-05 22:33:03,768 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2025-03-05 22:33:03,768 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2025-03-05 22:33:03,768 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2025-03-05 22:33:03,768 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2025-03-05 22:33:12,884 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B/resolve/main/generation_config.json HTTP/1.1" 200 0
+2025-03-05 22:33:12,905 - models.deepseek_model - INFO - Model loaded successfully on cuda
+2025-03-05 22:33:12,906 - chatbot_agents.chatbot_agent - DEBUG - Initialized DeepSeek model
+2025-03-05 22:33:12,906 - services.faq_retrieval - INFO - Initializing FAQ retrieval service
+2025-03-05 22:33:17,612 - tensorflow - WARNING - From C:\Users\imadh\anaconda3\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-05 22:33:18,140 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda
+2025-03-05 22:33:18,140 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-05 22:33:18,269 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-05 22:33:18,422 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-05 22:33:18,569 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-05 22:33:18,718 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-05 22:33:18,858 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-05 22:33:18,999 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-05 22:33:19,726 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-05 22:33:19,950 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/1.1" 200 6758
+2025-03-05 22:33:20,098 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6758
+2025-03-05 22:33:20,267 - services.faq_retrieval - DEBUG - Loaded embedding model: sentence-transformers/all-MiniLM-L6-v2
+2025-03-05 22:33:20,268 - services.faq_retrieval - DEBUG - Loading existing FAQ data from C:\Users\imadh\PycharmProjects\customer__agent\data\faqs.json
+2025-03-05 22:33:20,268 - services.faq_retrieval - INFO - Loaded 45 FAQs
+2025-03-05 22:33:20,270 - services.faq_retrieval - DEBUG - Initializing FAISS vector store
+2025-03-05 22:33:20,846 - faiss.loader - DEBUG - Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2025-03-05 22:33:20,847 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2025-03-05 22:33:20,847 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-03-05 22:33:20,847 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-03-05 22:33:20,909 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-03-05 22:33:20,917 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes.
+2025-03-05 22:33:20,920 - services.faq_retrieval - INFO - Initialized vector store with 45 FAQ documents
+2025-03-05 22:33:20,920 - chatbot_agents.chatbot_agent - DEBUG - Initialized FAQ retrieval service
+2025-03-05 22:33:20,920 - services.memory - INFO - Initializing conversation memory service
+2025-03-05 22:33:20,921 - services.memory - DEBUG - Conversation memory service initialized
+2025-03-05 22:33:20,921 - chatbot_agents.chatbot_agent - DEBUG - Initialized conversation memory service
+2025-03-05 22:33:20,921 - services.order_tracking - INFO - Initializing order tracking service
+2025-03-05 22:33:20,921 - services.order_tracking - DEBUG - Loading existing order data from C:\Users\imadh\PycharmProjects\customer__agent\data\orders.json
+2025-03-05 22:33:20,922 - services.order_tracking - INFO - Loaded 20 orders
+2025-03-05 22:33:20,922 - services.order_tracking - DEBUG - Order tracking service initialized
+2025-03-05 22:33:20,922 - chatbot_agents.chatbot_agent - DEBUG - Initialized order tracking service
+2025-03-05 22:33:20,923 - chatbot_agents.chatbot_agent - INFO - Chatbot agent initialized successfully
+2025-03-05 22:33:20,930 - __main__ - INFO - Starting Customer Service Chatbot API on 0.0.0.0:8000
+2025-03-05 22:33:20,936 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-03-05 22:33:32,162 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-05 22:33:42,966 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-05 22:33:45,035 - __main__ - DEBUG - Received chat request: hi (Session ID: 486b3540-55e8-460e-b128-698cc6135a4e)
+2025-03-05 22:33:45,035 - chatbot_agents.chatbot_agent - DEBUG - Processing message for session 486b3540-55e8-460e-b128-698cc6135a4e: hi
+2025-03-05 22:33:45,035 - services.memory - DEBUG - No context found for session 486b3540-55e8-460e-b128-698cc6135a4e
+2025-03-05 22:33:45,036 - services.memory - DEBUG - Creating new conversation history for session 486b3540-55e8-460e-b128-698cc6135a4e
+2025-03-05 22:33:45,036 - services.memory - DEBUG - Added user message to session 486b3540-55e8-460e-b128-698cc6135a4e
+2025-03-05 22:33:45,037 - chatbot_agents.chatbot_agent - DEBUG - No order ID found in message
+2025-03-05 22:33:45,037 - services.faq_retrieval - DEBUG - Retrieving FAQs for query: hi
+2025-03-05 22:33:45,079 - services.faq_retrieval - DEBUG - Retrieved 1 relevant FAQs
+2025-03-05 22:33:45,080 - services.faq_retrieval - DEBUG - Query does not closely match any FAQ
+2025-03-05 22:33:45,080 - chatbot_agents.chatbot_agent - DEBUG - Using language model for response
+2025-03-05 22:33:45,080 - chatbot_agents.chatbot_agent - DEBUG - Generating model response
+2025-03-05 22:33:45,080 - services.memory - DEBUG - Retrieved 1 messages for session 486b3540-55e8-460e-b128-698cc6135a4e
+2025-03-05 22:33:45,080 - models.deepseek_model - DEBUG - Generating response for prompt: hi...
+2025-03-05 22:33:48,117 - models.deepseek_model - DEBUG - Generated response: Okay, the user just sent "hi". I should respond in...
+2025-03-05 22:33:48,118 - chatbot_agents.chatbot_agent - DEBUG - Model generated response: Okay, the user just sent "hi". I should respond in...
+2025-03-05 22:33:48,118 - services.memory - DEBUG - Added assistant message to session 486b3540-55e8-460e-b128-698cc6135a4e
+2025-03-05 22:33:48,118 - services.memory - DEBUG - No context found for session 486b3540-55e8-460e-b128-698cc6135a4e
+2025-03-05 22:33:48,119 - chatbot_agents.chatbot_agent - DEBUG - Generated response for session 486b3540-55e8-460e-b128-698cc6135a4e: Okay, the user just sent "hi". I should respond in...
+2025-03-05 22:33:48,119 - __main__ - DEBUG - Generated response: Okay, the user just sent "hi". I should respond in a friendly and professional way. I need to keep it concise and not show any internal thoughts. Maybe say hi and offer assistance.
+</think>
+
+hi! how can i assist you today? (Session ID: 486b3540-55e8-460e-b128-698cc6135a4e)
+2025-03-05 22:33:50,191 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-05 22:34:27,651 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-05 22:34:27,886 - __main__ - DEBUG - Tracking order: ORD-100001
+2025-03-05 22:34:27,887 - chatbot_agents.chatbot_agent - DEBUG - Tracking order: ORD-100001
+2025-03-05 22:34:27,887 - services.order_tracking - DEBUG - Retrieving order: ORD-100001
+2025-03-05 22:34:27,887 - services.order_tracking - DEBUG - Found order: ORD-100001
+2025-03-05 22:34:27,888 - chatbot_agents.chatbot_agent - DEBUG - Found order ORD-100001 with status Delivered
+2025-03-05 22:34:29,920 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-05 22:34:33,256 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-05 22:34:34,437 - __main__ - DEBUG - Tracking order: ORD-10001
+2025-03-05 22:34:34,437 - chatbot_agents.chatbot_agent - DEBUG - Tracking order: ORD-10001
+2025-03-05 22:34:34,438 - services.order_tracking - DEBUG - Retrieving order: ORD-10001
+2025-03-05 22:34:34,438 - services.order_tracking - DEBUG - Order not found: ORD-10001
+2025-03-05 22:34:34,438 - chatbot_agents.chatbot_agent - DEBUG - Order not found: ORD-10001
+2025-03-05 22:34:36,472 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-05 22:34:49,078 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
+2025-03-05 22:34:51,135 - __main__ - DEBUG - Received chat request: can u help me track my order (Session ID: 486b3540-55e8-460e-b128-698cc6135a4e)
+2025-03-05 22:34:51,135 - chatbot_agents.chatbot_agent - DEBUG - Processing message for session 486b3540-55e8-460e-b128-698cc6135a4e: can u help me track my order
+2025-03-05 22:34:51,136 - services.memory - DEBUG - No context found for session 486b3540-55e8-460e-b128-698cc6135a4e
+2025-03-05 22:34:51,136 - services.memory - DEBUG - Added user message to session 486b3540-55e8-460e-b128-698cc6135a4e
+2025-03-05 22:34:51,137 - chatbot_agents.chatbot_agent - DEBUG - No order ID found in message
+2025-03-05 22:34:51,137 - services.faq_retrieval - DEBUG - Retrieving FAQs for query: can u help me track my order
+2025-03-05 22:34:51,148 - services.faq_retrieval - DEBUG - Retrieved 1 relevant FAQs
+2025-03-05 22:34:51,148 - services.faq_retrieval - DEBUG - Query matches FAQ with similarity 0.7661500042298224
+2025-03-05 22:34:51,148 - chatbot_agents.chatbot_agent - DEBUG - Detected FAQ question
+2025-03-05 22:34:51,148 - chatbot_agents.chatbot_agent - DEBUG - Handling FAQ question
+2025-03-05 22:34:51,149 - services.faq_retrieval - DEBUG - Retrieving FAQs for query: can u help me track my order
+2025-03-05 22:34:51,158 - services.faq_retrieval - DEBUG - Retrieved 1 relevant FAQs
+2025-03-05 22:34:51,159 - services.faq_retrieval - DEBUG - Query matches FAQ with similarity 0.7661500042298224
+2025-03-05 22:34:51,159 - chatbot_agents.chatbot_agent - DEBUG - Found matching FAQ: How do I track my order?
+2025-03-05 22:34:51,159 - services.memory - DEBUG - Added assistant message to session 486b3540-55e8-460e-b128-698cc6135a4e
+2025-03-05 22:34:51,159 - services.memory - DEBUG - No context found for session 486b3540-55e8-460e-b128-698cc6135a4e
+2025-03-05 22:34:51,160 - chatbot_agents.chatbot_agent - DEBUG - Generated response for session 486b3540-55e8-460e-b128-698cc6135a4e: You can track your order by entering your order ID...
+2025-03-05 22:34:51,160 - __main__ - DEBUG - Generated response: You can track your order by entering your order ID in the order tracking section on our website or by contacting our customer support. (Session ID: 486b3540-55e8-460e-b128-698cc6135a4e)
+2025-03-05 22:34:53,227 - chatbot_agents.chatbot_agent - DEBUG - Retrieving all FAQs
